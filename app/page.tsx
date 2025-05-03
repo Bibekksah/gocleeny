@@ -24,7 +24,7 @@ export default function Home() {
           <p className="text-xl text-white/90 max-w-[800px]">
             Professional, sustainable cleaning services that care for your home and the planet.
           </p>
-          <Button size="lg" className="bg-green-600 hover:bg-green-700 text-white">
+          <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white">
             <Link href="/booking" className="flex items-center gap-2">
               Book a Cleaning <ArrowRight className="h-4 w-4" />
             </Link>
@@ -117,7 +117,7 @@ export default function Home() {
             </div>
           </div>
           <div className="text-center mt-10">
-            <Button className="bg-green-600 hover:bg-green-700 text-white">
+            <Button className="bg-blue-600 hover:bg-blue-700 text-white">
               <Link href="/services" className="flex items-center gap-2">
                 View All Services <ArrowRight className="h-4 w-4" />
               </Link>
@@ -127,7 +127,7 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-green-600 text-white">
+      <section className="py-16 bg-blue-600 text-white">
         <div className="container px-4 md:px-6 text-center">
           <h2 className="text-3xl font-bold mb-4">Ready for a Cleaner, Greener Home?</h2>
           <p className="text-xl mb-8 max-w-[800px] mx-auto">
