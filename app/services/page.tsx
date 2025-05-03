@@ -54,27 +54,27 @@ export default function ServicesPage() {
               </p>
               <div className="space-y-2 mt-4">
                 <div className="flex items-start gap-2">
-                  <CheckCircle className="h-5 w-5 text-green-600 mt-1 flex-shrink-0" />
+                  <CheckCircle className="h-5 w-5 text-blue-600 mt-1 flex-shrink-0" />
                   <p>Thorough cleaning of all rooms and living spaces</p>
                 </div>
                 <div className="flex items-start gap-2">
-                  <CheckCircle className="h-5 w-5 text-green-600 mt-1 flex-shrink-0" />
+                  <CheckCircle className="h-5 w-5 text-blue-600 mt-1 flex-shrink-0" />
                   <p>Dusting, vacuuming, and mopping of all surfaces</p>
                 </div>
                 <div className="flex items-start gap-2">
-                  <CheckCircle className="h-5 w-5 text-green-600 mt-1 flex-shrink-0" />
+                  <CheckCircle className="h-5 w-5 text-blue-600 mt-1 flex-shrink-0" />
                   <p>Kitchen and bathroom deep cleaning</p>
                 </div>
                 <div className="flex items-start gap-2">
-                  <CheckCircle className="h-5 w-5 text-green-600 mt-1 flex-shrink-0" />
+                  <CheckCircle className="h-5 w-5 text-blue-600 mt-1 flex-shrink-0" />
                   <p>Eco-friendly products that are safe for children and pets</p>
                 </div>
               </div>
               <div className="mt-6">
-                <p className="text-xl font-semibold text-green-600">£15/hr</p>
+                <p className="text-xl font-semibold text-blue-600">£15/hr</p>
                 <p className="text-green-700 font-medium">20% off for first-time customers</p>
               </div>
-              <Button className="mt-4 bg-green-600 hover:bg-green-700 text-white">
+              <Button className="mt-4 bg-blue-600 hover:bg-blue-700 text-white">
                 <Link href="/booking" className="flex items-center gap-2">
                   Book Home Cleaning <ArrowRight className="h-4 w-4" />
                 </Link>
@@ -161,27 +161,27 @@ export default function ServicesPage() {
               </p>
               <div className="space-y-2 mt-4">
                 <div className="flex items-start gap-2">
-                  <CheckCircle className="h-5 w-5 text-green-600 mt-1 flex-shrink-0" />
+                  <CheckCircle className="h-5 w-5 text-blue-600 mt-1 flex-shrink-0" />
                   <p>Deep cleaning of all rooms and spaces</p>
                 </div>
                 <div className="flex items-start gap-2">
-                  <CheckCircle className="h-5 w-5 text-green-600 mt-1 flex-shrink-0" />
+                  <CheckCircle className="h-5 w-5 text-blue-600 mt-1 flex-shrink-0" />
                   <p>Oven and appliance cleaning</p>
                 </div>
                 <div className="flex items-start gap-2">
-                  <CheckCircle className="h-5 w-5 text-green-600 mt-1 flex-shrink-0" />
+                  <CheckCircle className="h-5 w-5 text-blue-600 mt-1 flex-shrink-0" />
                   <p>Carpet and upholstery cleaning</p>
                 </div>
                 <div className="flex items-start gap-2">
-                  <CheckCircle className="h-5 w-5 text-green-600 mt-1 flex-shrink-0" />
+                  <CheckCircle className="h-5 w-5 text-blue-600 mt-1 flex-shrink-0" />
                   <p>Window and blind cleaning</p>
                 </div>
               </div>
               <div className="mt-6">
                 <p className="text-xl font-semibold text-green-600">Custom Quote</p>
-                <p className="text-green-700">Based on property size and condition</p>
+                <p className="text-blue-700">Based on property size and condition</p>
               </div>
-              <Button className="mt-4 bg-green-600 hover:bg-green-700 text-white">
+              <Button className="mt-4 bg-blue-600 hover:bg-blue-700 text-white">
                 <Link href="/booking" className="flex items-center gap-2">
                   Book End of Tenancy Cleaning <ArrowRight className="h-4 w-4" />
                 </Link>
@@ -253,7 +253,7 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-green-600 text-white">
+      <section className="py-16 bg-blue-600 text-white">
         <div className="container px-4 md:px-6 text-center">
           <h2 className="text-3xl font-bold mb-4">Ready to Experience Eco-Friendly Cleaning?</h2>
           <p className="text-xl mb-8 max-w-[800px] mx-auto">
