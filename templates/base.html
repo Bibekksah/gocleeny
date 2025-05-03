@@ -21,7 +21,7 @@
                 <a href="{% url 'services' %}" class="nav-link">Services</a>
                 <a href="{% url 'booking' %}" class="nav-link">Booking</a>
                 {% if user.is_authenticated %}
-                <a href="{% url 'my_bookings' %}" class="nav-link">My Bookings</a>
+                <a href="{% url 'my_bookings' %}" class="nav-link"></a>
                 {% endif %}
                 <a href="{% url 'careers' %}" class="nav-link">Careers</a>
                 <a href="{% url 'franchising' %}" class="nav-link">Franchising</a>
@@ -64,7 +64,7 @@
                     <a href="{% url 'services' %}" class="mobile-nav-link">Services</a>
                     <a href="{% url 'booking' %}" class="mobile-nav-link">Booking</a>
                     {% if user.is_authenticated %}
-                    <a href="{% url 'my_bookings' %}" class="mobile-nav-link">My Bookings</a>
+                    <a href="{% url 'my_bookings' %}" class="mobile-nav-link"></a>
                     <a href="{% url 'logout' %}" class="mobile-nav-link">Logout</a>
                     {% else %}
                     <a href="{% url 'login' %}" class="mobile-nav-link">Login</a>
