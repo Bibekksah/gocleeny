@@ -131,7 +131,7 @@ export default function BookingPage() {
       <div className="container px-4 md:px-6 py-16 flex flex-col items-center justify-center min-h-[70vh]">
         <Card className="w-full max-w-md">
           <CardHeader>
-            <div className="mx-auto mb-4 h-12 w-12 bg-green-100 rounded-full flex items-center justify-center">
+            <div className="mx-auto mb-4 h-12 w-12 bg-navy blue-100 rounded-full flex items-center justify-center">
               <CheckCircle className="h-6 w-6 text-green-600" />
             </div>
             <CardTitle className="text-center text-2xl">Booking Successful!</CardTitle>
@@ -280,7 +280,7 @@ export default function BookingPage() {
 
                   <Button
                     type="submit"
-                    className="w-full bg-green-600 hover:bg-green-700 text-white"
+                    className="w-full bg-navy blue-600 hover:bg-navy blue-700 text-white"
                     disabled={isSubmitting}
                   >
                     {isSubmitting ? "Submitting..." : "Book Cleaning Service"}
@@ -293,26 +293,26 @@ export default function BookingPage() {
               <h3 className="text-lg font-semibold mb-4">What happens next?</h3>
               <ol className="space-y-3">
                 <li className="flex items-start gap-3">
-                  <div className="h-6 w-6 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <span className="text-green-600 text-sm font-medium">1</span>
+                  <div className="h-6 w-6 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <span className="text-navy blue-600 text-sm font-medium">1</span>
                   </div>
                   <p>We'll review your booking request and check availability</p>
                 </li>
                 <li className="flex items-start gap-3">
-                  <div className="h-6 w-6 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <span className="text-green-600 text-sm font-medium">2</span>
+                  <div className="h-6 w-6 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <span className="text-navy blue-600 text-sm font-medium">2</span>
                   </div>
                   <p>You'll receive a confirmation email with all the details</p>
                 </li>
                 <li className="flex items-start gap-3">
-                  <div className="h-6 w-6 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <span className="text-green-600 text-sm font-medium">3</span>
+                  <div className="h-6 w-6 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <span className="text-navy blue-600 text-sm font-medium">3</span>
                   </div>
                   <p>Our cleaning team will arrive at the scheduled time</p>
                 </li>
                 <li className="flex items-start gap-3">
-                  <div className="h-6 w-6 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <span className="text-green-600 text-sm font-medium">4</span>
+                  <div className="h-6 w-6 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <span className="text-navy blue-600 text-sm font-medium">4</span>
                   </div>
                   <p>Enjoy your clean, eco-friendly space!</p>
                 </li>
