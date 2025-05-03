@@ -210,15 +210,15 @@ export default function CareersPage() {
               </p>
               <ul className="space-y-2 mb-4">
                 <li className="flex items-start gap-2">
-                  <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
+                  <CheckCircle className="h-5 w-5 text-navy blue-600 mt-0.5 flex-shrink-0" />
                   <span>Experience in cleaning services preferred</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
+                  <CheckCircle className="h-5 w-5 text-navy blue-600 mt-0.5 flex-shrink-0" />
                   <span>Attention to detail and commitment to quality</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
+                  <CheckCircle className="h-5 w-5 text-navy blue-600 mt-0.5 flex-shrink-0" />
                   <span>Reliable transportation required</span>
                 </li>
               </ul>
@@ -232,15 +232,15 @@ export default function CareersPage() {
               </p>
               <ul className="space-y-2 mb-4">
                 <li className="flex items-start gap-2">
-                  <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
+                  <CheckCircle className="h-5 w-5 text-navy blue-600 mt-0.5 flex-shrink-0" />
                   <span>2+ years of experience in cleaning services</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
+                  <CheckCircle className="h-5 w-5 text-navy blue-600 mt-0.5 flex-shrink-0" />
                   <span>Leadership skills and ability to train team members</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
+                  <CheckCircle className="h-5 w-5 text-navy blue-600 mt-0.5 flex-shrink-0" />
                   <span>Excellent communication and problem-solving skills</span>
                 </li>
               </ul>
@@ -254,15 +254,15 @@ export default function CareersPage() {
               </p>
               <ul className="space-y-2 mb-4">
                 <li className="flex items-start gap-2">
-                  <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
+                  <CheckCircle className="h-5 w-5 text-navy blue-600 mt-0.5 flex-shrink-0" />
                   <span>Previous customer service experience preferred</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
+                  <CheckCircle className="h-5 w-5 text-navy blue-600 mt-0.5 flex-shrink-0" />
                   <span>Excellent communication and organizational skills</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
+                  <CheckCircle className="h-5 w-5 text-navy blue-600 mt-0.5 flex-shrink-0" />
                   <span>Proficiency with scheduling software and CRM systems</span>
                 </li>
               </ul>
