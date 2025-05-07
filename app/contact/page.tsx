@@ -23,7 +23,7 @@ export default function ContactPage() {
   const [errors, setErrors] = useState<Record<string, string>>({});
 
   useEffect(() => {
-    emailjs.init("gKtLl-npkd7nOFLrn"); // Replace with your actual Public Key
+    emailjs.init("LTECK87seUzayyohf"); // Replace with your actual Public Key
   }, []);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -63,10 +63,10 @@ export default function ContactPage() {
 
     try {
       const result = await emailjs.sendForm(
-        "service_zxr9o9b", // Replace with your Service ID
-        "template_66vnbnq", // Replace with your Template ID
+        "service_mdsgsgl", // Replace with your Service ID
+        "template_qolbloc", // Replace with your Template ID
         e.target as HTMLFormElement,
-        "gKtLl-npkd7nOFLrn" // Replace with your Public Key
+        "LTECK87seUzayyohf" // Replace with your Public Key
       );
       console.log("EmailJS response:", result);
       setIsSuccess(true);
