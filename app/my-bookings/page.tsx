@@ -39,7 +39,7 @@ export default function MyBookingsPage() {
 
   // Initialize EmailJS on component mount
   useEffect(() => {
-    emailjs.init("gKtLl-ep0UCqcSAgNnrC3k1"); // Replace with your EmailJS Public Key
+    emailjs.init("LTECK87seUzayyohf"); // Replace with your EmailJS Public Key
   }, []);
 
   // Fetch bookings on component mount
@@ -103,16 +103,16 @@ export default function MyBookingsPage() {
 
       // Send email notification
       await emailjs.send(
-        "service_tqh5h6q", // Replace with your EmailJS Service ID
-        "template_latkxwb", // Replace with your EmailJS Template ID for cancellation
+        "service_mdsgsgl", // Replace with your EmailJS Service ID
+        "template_c0ser8o", // Replace with your EmailJS Template ID for cancellation
         {
           id: bookingToCancel.id,
           serviceType: bookingToCancel.serviceType,
           date: formatDate(bookingToCancel.date),
           reason: cancelReason || "No reason provided",
-          to_email: "gocleeny.test@gmail.com", // Your email address
+          to_email: "gocleeny.booking@gmail.com", // Your email address
         },
-        "gKtLl-ep0UCqcSAgNnrC3k1" // Replace with your EmailJS Public Key
+        "LTECK87seUzayyohf" // Replace with your EmailJS Public Key
       );
 
       // Update local state
