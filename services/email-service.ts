@@ -7,7 +7,7 @@ interface EmailOptions {
 }
 
 export class EmailService {
-  private adminEmail = "gocleeny@gmail.com"
+  private adminEmail = "gocleeny.booking@gmail.com"
 
   // Simulate sending an email
   async sendEmail(options: EmailOptions): Promise<boolean> {
