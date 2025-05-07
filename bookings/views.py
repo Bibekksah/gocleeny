@@ -44,7 +44,7 @@ def booking(request):
                 f'New Booking: {booking.id}',
                 f'A new booking has been made:\n\nCustomer: {booking.name}\nEmail: {booking.email}\nPhone: {booking.phone}\nService: {booking.get_service_name()}\nDate: {booking.date}\nNotes: {booking.notes or "None"}',
                 'noreply@gocleeny.com',
-                ['gocleeny@gmail.com'],
+                ['gocleeny.booking@gmail.com'],
                 fail_silently=False,
             )
             
