@@ -280,7 +280,7 @@ export default function BookingPage() {
 
                   <Button
                     type="submit"
-                    className="w-full bg-navy blue-600 hover:bg-navy blue-700 text-white"
+                    className="w-full bg-blue-600 hover:bg-blue-700 text-black"
                     disabled={isSubmitting}
                   >
                     {isSubmitting ? "Submitting..." : "Book Cleaning Service"}
