@@ -191,7 +191,7 @@ export default function MyBookingsPage() {
           />
         </div>
         <div className="container relative z-10 px-4 md:px-6 flex flex-col items-center text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-white tracking-tight">My Bookings</h1>
+          <h1 className="text-4xl md:text-5xl font-bold text-white tracking-tight"></h1>
           <p className="text-xl text-white/90 max-w-[800px] mt-4">Manage your cleaning service appointments</p>
         </div>
       </section>
