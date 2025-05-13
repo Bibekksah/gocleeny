@@ -43,8 +43,8 @@ export default function ServicesPage() {
         <div className="container px-4 md:px-6">
           <div className="grid gap-12 md:grid-cols-2 items-center">
             <div className="space-y-4">
-              <div className="h-12 w-12 bg-green-100 rounded-full flex items-center justify-center">
-                <Leaf className="h-6 w-6 text-green-600" />
+              <div className="h-12 w-12 bg-blue-100 rounded-full flex items-center justify-center">
+                <Leaf className="h-6 w-6 text-blue-600" />
               </div>
               <h2 className="text-3xl font-bold tracking-tight">Home Cleaning</h2>
               <p className="text-gray-600">
@@ -72,7 +72,7 @@ export default function ServicesPage() {
               </div>
               <div className="mt-6">
                 <p className="text-xl font-semibold text-blue-600">£15/hr</p>
-                <p className="text-green-700 font-medium">20% off for first-time customers</p>
+                <p className="text-blue-700 font-medium">20% off for first-time customers</p>
               </div>
               <Button className="mt-4 bg-blue-600 hover:bg-blue-700 text-white">
                 <Link href="/booking" className="flex items-center gap-2">
@@ -151,8 +151,8 @@ export default function ServicesPage() {
         <div className="container px-4 md:px-6">
           <div className="grid gap-12 md:grid-cols-2 items-center">
             <div className="space-y-4">
-              <div className="h-12 w-12 bg-green-100 rounded-full flex items-center justify-center">
-                <Clock className="h-6 w-6 text-green-600" />
+              <div className="h-12 w-12 bg-blue-100 rounded-full flex items-center justify-center">
+                <Clock className="h-6 w-6 text-blue-600" />
               </div>
               <h2 className="text-3xl font-bold tracking-tight">End of Tenancy Cleaning</h2>
               <p className="text-gray-600">
@@ -178,7 +178,7 @@ export default function ServicesPage() {
                 </div>
               </div>
               <div className="mt-6">
-                <p className="text-xl font-semibold text-green-600">Custom Quote</p>
+                <p className="text-xl font-semibold text-blue-600">Custom Quote</p>
                 <p className="text-blue-700">Based on property size and condition</p>
               </div>
               <Button className="mt-4 bg-blue-600 hover:bg-blue-700 text-white">
@@ -259,7 +259,7 @@ export default function ServicesPage() {
           <p className="text-xl mb-8 max-w-[800px] mx-auto">
             Book your service today and enjoy a cleaner, greener space with GoCleeny.
           </p>
-          <Button size="lg" variant="outline" className="bg-white text-green-600 hover:bg-gray-100">
+          <Button size="lg" variant="outline" className="bg-white text-blue-600 hover:bg-gray-100">
             <Link href="/booking" className="flex items-center gap-2">
               Book Now <ArrowRight className="h-4 w-4" />
             </Link>
