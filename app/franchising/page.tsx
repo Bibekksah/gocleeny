@@ -115,7 +115,7 @@ export default function FranchisingPage() {
         </div>
         <div className="container relative z-10 px-4 md:px-6 flex flex-col items-center text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-white tracking-tight">Own a GoCleeny Franchise</h1>
-          <p className="text-xl text-blue/90 max-w-[800px] mt-4">
+          <p className="text-xl text-white/90 max-w-[800px] mt-4">
             Join the eco-friendly cleaning revolution and build a successful business
           </p>
         </div>
@@ -289,14 +289,14 @@ export default function FranchisingPage() {
                       </div>
                     </li>
                     <li className="flex items-start gap-2">
-                      <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
+                      <CheckCircle className="h-5 w-5 text-blue-600 mt-0.5 flex-shrink-0" />
                       <div>
                         <span className="font-medium">Marketing Fee:</span>
                         <p className="text-blue-600">2% of gross monthly revenue</p>
                       </div>
                     </li>
                     <li className="flex items-start gap-2">
-                      <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
+                      <CheckCircle className="h-5 w-5 text-blue-600 mt-0.5 flex-shrink-0" />
                       <div>
                         <span className="font-medium">Technology Fee:</span>
                         <p className="text-blue-600">£150 per month</p>
