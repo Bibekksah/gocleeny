@@ -154,12 +154,12 @@ export default function MyBookingsPage() {
   const getStatusBadge = (status: BookingStatus) => {
     switch (status) {
       case BookingStatus.ACTIVE:
-        return <Badge className="bg-green-500">Active</Badge>;
+        return <Badge className="bg-blue-500">Active</Badge>;
       case BookingStatus.CANCELED:
         return <Badge variant="destructive">Canceled</Badge>;
       case BookingStatus.COMPLETED:
         return (
-          <Badge variant="outline" className="border-green-500 text-green-700">
+          <Badge variant="outline" className="border-blue-500 text-blue-700">
             Completed
           </Badge>
         );
@@ -304,7 +304,7 @@ export default function MyBookingsPage() {
             <TabsContent value="history">
               {isLoading ? (
                 <div className="flex justify-center items-center py-20">
-                  <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-green-600"></div>
+                  <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-600"></div>
                 </div>
               ) : filteredBookings.filter((b) => b.status !== BookingStatus.ACTIVE).length === 0 ? (
                 <Card>
