@@ -44,15 +44,15 @@ export default function Home() {
               </p>
               <div className="space-y-2">
                 <div className="flex items-start gap-2">
-                  <CheckCircle className="h-5 w-5 text-green-600 mt-1 flex-shrink-0" />
+                  <CheckCircle className="h-5 w-5 text-blue-600 mt-1 flex-shrink-0" />
                   <p>100% eco-friendly cleaning products</p>
                 </div>
                 <div className="flex items-start gap-2">
-                  <CheckCircle className="h-5 w-5 text-green-600 mt-1 flex-shrink-0" />
+                  <CheckCircle className="h-5 w-5 text-blue-600 mt-1 flex-shrink-0" />
                   <p>Professional, vetted cleaning specialists</p>
                 </div>
                 <div className="flex items-start gap-2">
-                  <CheckCircle className="h-5 w-5 text-green-600 mt-1 flex-shrink-0" />
+                  <CheckCircle className="h-5 w-5 text-blue-600 mt-1 flex-shrink-0" />
                   <p>Flexible scheduling to fit your lifestyle</p>
                 </div>
               </div>
@@ -83,13 +83,13 @@ export default function Home() {
           </div>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
             <div className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-              <div className="h-12 w-12 bg-green-100 rounded-full flex items-center justify-center mb-4">
-                <Leaf className="h-6 w-6 text-green-600" />
+              <div className="h-12 w-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                <Leaf className="h-6 w-6 text-blue-600" />
               </div>
               <h3 className="text-xl font-semibold mb-2">Home Cleaning</h3>
               <p className="text-gray-600 mb-4">Regular cleaning services for a consistently clean home.</p>
-              <p className="text-green-600 font-semibold">£15/hr</p>
-              <p className="text-sm text-green-700 mt-1">20% off for first-time customers</p>
+              <p className="text-blue-600 font-semibold">£15/hr</p>
+              <p className="text-sm text-blue-700 mt-1">20% off for first-time customers</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
               <div className="h-12 w-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
@@ -100,12 +100,12 @@ export default function Home() {
               <p className="text-blue-600 font-semibold">Custom Quote</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-              <div className="h-12 w-12 bg-green-100 rounded-full flex items-center justify-center mb-4">
-                <Clock className="h-6 w-6 text-green-600" />
+              <div className="h-12 w-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                <Clock className="h-6 w-6 text-blue-600" />
               </div>
               <h3 className="text-xl font-semibold mb-2">End of Tenancy</h3>
               <p className="text-gray-600 mb-4">Deep cleaning when moving in or out of a property.</p>
-              <p className="text-green-600 font-semibold">Custom Quote</p>
+              <p className="text-blue-600 font-semibold">Custom Quote</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
               <div className="h-12 w-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
@@ -133,7 +133,7 @@ export default function Home() {
           <p className="text-xl mb-8 max-w-[800px] mx-auto">
             Book your eco-friendly cleaning service today and enjoy a spotless home without harming the environment.
           </p>
-          <Button size="lg" variant="outline" className="bg-white text-green-600 hover:bg-gray-100">
+          <Button size="lg" variant="outline" className="bg-white text-blue-600 hover:bg-gray-100">
             <Link href="/booking" className="flex items-center gap-2">
               Book Now <ArrowRight className="h-4 w-4" />
             </Link>
