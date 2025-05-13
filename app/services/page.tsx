@@ -43,8 +43,8 @@ export default function ServicesPage() {
         <div className="container px-4 md:px-6">
           <div className="grid gap-12 md:grid-cols-2 items-center">
             <div className="space-y-4">
-              <div className="h-12 w-12 bg-blue-100 rounded-full flex items-center justify-center">
-                <Leaf className="h-6 w-6 text-blue-600" />
+              <div className="h-12 w-12 bg-green-100 rounded-full flex items-center justify-center">
+                <Leaf className="h-6 w-6 text-green-600" />
               </div>
               <h2 className="text-3xl font-bold tracking-tight">Home Cleaning</h2>
               <p className="text-gray-600">
