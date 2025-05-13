@@ -201,7 +201,7 @@ export default function CareersPage() {
           </div>
 
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            <div className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+            <div className="bg-blue p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
               <h3 className="text-xl font-semibold mb-2">Cleaning Specialist</h3>
               <p className="text-gray-500 mb-4">Full-time / Part-time</p>
               <p className="text-gray-600 mb-4">
@@ -224,7 +224,7 @@ export default function CareersPage() {
               </ul>
             </div>
 
-            <div className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+            <div className="bg-blue p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
               <h3 className="text-xl font-semibold mb-2">Team Lead</h3>
               <p className="text-gray-500 mb-4">Full-time</p>
               <p className="text-gray-600 mb-4">
@@ -246,7 +246,7 @@ export default function CareersPage() {
               </ul>
             </div>
 
-            <div className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+            <div className="bg-blue p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
               <h3 className="text-xl font-semibold mb-2">Customer Service Representative</h3>
               <p className="text-gray-500 mb-4">Full-time / Remote</p>
               <p className="text-gray-600 mb-4">
