@@ -88,7 +88,7 @@ export default function Home() {
               </div>
               <h3 className="text-xl font-semibold mb-2">Home Cleaning</h3>
               <p className="text-gray-600 mb-4">Regular cleaning services for a consistently clean home.</p>
-              <p className="text-blue-600 font-semibold">£15/hr</p>
+              <p className="text-blue-600 font-semibold">From £15/hr</p>
               <p className="text-sm text-blue-700 mt-1">20% off for first-time customers</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
