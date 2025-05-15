@@ -92,16 +92,16 @@ export default function Footer() {
             <ul className="space-y-3">
               <li className="flex items-start gap-3">
                 <Mail className="h-5 w-5 text-green-400 mt-0.5" />
-                <span className="text-gray-400">info@gocleeny.com</span>
+                <span className="text-gray-400">gocleeny@gmail.com</span>
               </li>
               <li className="flex items-start gap-3">
                 <Phone className="h-5 w-5 text-green-400 mt-0.5" />
-                <span className="text-gray-400">+44 123 456 7890</span>
+                <span className="text-gray-400">+44 7350479620</span>
               </li>
               <li className="flex items-start gap-3">
                 <MapPin className="h-5 w-5 text-green-400 mt-0.5" />
                 <span className="text-gray-400">
-                Darwin Street, Bolton, United Kingdom</span>
+                Bolton, United Kingdom</span>
               </li>
             </ul>
           </div>
@@ -109,7 +109,7 @@ export default function Footer() {
 
         <div className="border-t border-gray-800 mt-12 pt-6 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm">&copy; {new Date().getFullYear()} GoCleeny. All rights reserved.</p>
-           <p className="text-gray-400 text-sm">Created by Chiranjeevi and Bibek sah.</p>
+           <p className="text-gray-400 text-sm">Created by Interpid Foundation.</p>
           <div className="flex gap-4 mt-4 md:mt-0">
             <Link href="/privacy" className="text-gray-400 hover:text-white text-sm transition-colors">
               Privacy Policy
