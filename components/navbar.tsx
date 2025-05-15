@@ -31,8 +31,8 @@ export default function Navbar() {
           <Link href="/services" className="text-sm font-medium hover:text-green-600 transition-colors">
             Services
           </Link>
-          <Link href="/booking" className="text-sm font-medium hover:text-green-600 transition-colors">
-{/*             Booking
+{/*           <Link href="/booking" className="text-sm font-medium hover:text-green-600 transition-colors">
+            Booking
           </Link>
           <Link href="/my-bookings" className="text-sm font-medium hover:text-green-600 transition-colors">
             My Bookings
@@ -47,18 +47,6 @@ export default function Navbar() {
             Contact
           </Link>
         </nav>
-
-{/*         <div className="hidden md:flex gap-4">
-          <Link href="/my-bookings">
-            <Button variant="outline" size="sm" className="gap-2">
-              <Calendar className="h-4 w-4" />
-              My Bookings
-            </Button>
-          </Link>
-          <Button className="bg-green-600 hover:bg-green-700 text-white">
-            <Link href="/booking">Book a Cleaning</Link>
-          </Button>
-        </div> */}
 
         {/* Mobile Menu Button */}
         <Button variant="ghost" size="icon" className="md:hidden" onClick={toggleMenu}>
@@ -94,16 +82,6 @@ export default function Navbar() {
             >
               Services
             </Link>
-{/*             <Link href="/booking" className="text-lg font-medium p-2 hover:bg-gray-100 rounded-md" onClick={toggleMenu}>
-              Booking
-            </Link> */}
-            <Link
-              href="/my-bookings"
-              className="text-lg font-medium p-2 hover:bg-gray-100 rounded-md"
-              onClick={toggleMenu}
-            >
-              My Bookings
-            </Link>
             <Link href="/careers" className="text-lg font-medium p-2 hover:bg-gray-100 rounded-md" onClick={toggleMenu}>
               Careers
             </Link>
@@ -117,11 +95,6 @@ export default function Navbar() {
             <Link href="/contact" className="text-lg font-medium p-2 hover:bg-gray-100 rounded-md" onClick={toggleMenu}>
               Contact
             </Link>
-{/*             <Button className="mt-4 w-full bg-green-600 hover:bg-green-700 text-white">
-              <Link href="/booking" onClick={toggleMenu}>
-                Book a Cleaning
-              </Link>
-            </Button> */}
           </nav>
         </div>
       )}
