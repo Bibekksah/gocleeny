@@ -150,7 +150,7 @@ export default function AboutPage() {
             <div className="flex flex-col md:flex-row items-center gap-6">
               <div className="relative h-[100px] w-[200px]">
                 <Image
-                  src="gologochruday.jpeg"
+                  src="logo.jpeg"
                   alt="SAMBIC Group logo"
                   fill
                   className="object-contain"
