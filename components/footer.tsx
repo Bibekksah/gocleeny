@@ -48,11 +48,11 @@ export default function Footer() {
                   Services
                 </Link>
               </li>
-              <li>
+{/*               <li>
                 <Link href="/booking" className="text-gray-400 hover:text-white transition-colors">
                   Book a Cleaning
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <Link href="/contact" className="text-gray-400 hover:text-white transition-colors">
                   Contact Us
