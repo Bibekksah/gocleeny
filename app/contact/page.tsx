@@ -120,7 +120,7 @@ export default function ContactPage() {
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
                   <div className="h-10 w-10 rounded-full bg-navy blue-100 flex items-center justify-center flex-shrink-0">
-                    <Mail className="h-5 w-5 text-green-600" />
+                    <Mail className="h-5 w-5 text-navy-600" />
                   </div>
                   <div>
                     <h3 className="font-semibold">Email</h3>
@@ -131,22 +131,22 @@ export default function ContactPage() {
 
                 <div className="flex items-start gap-4">
                   <div className="h-10 w-10 rounded-full bg-navy blue-100 flex items-center justify-center flex-shrink-0">
-                    <Phone className="h-5 w-5 text-green-600" />
+                    <Phone className="h-5 w-5 text-navy-600" />
                   </div>
                   <div>
                     <h3 className="font-semibold">Phone</h3>
-                    <p className="text-gray-600">+44 123 456 7890</p>
+                    <p className="text-gray-600">+44 735-047-9620</p>
                     <p className="text-sm text-gray-500 mt-1">Available Monday-Friday, 9am-5pm</p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-4">
                   <div className="h-10 w-10 rounded-full bg-navy blue-100 flex items-center justify-center flex-shrink-0">
-                    <MapPin className="h-5 w-5 text-green-600" />
+                    <MapPin className="h-5 w-5 text-navy-600" />
                   </div>
                   <div>
                     <h3 className="font-semibold">Location</h3>
-                    <p className="text-gray-600">London, United Kingdom</p>
+                    <p className="text-gray-600">Bolton, United Kingdom</p>
                     <p className="text-sm text-gray-500 mt-1">Serving the Greater London area</p>
                   </div>
                 </div>
@@ -227,7 +227,7 @@ export default function ContactPage() {
                 <Card>
                   <CardHeader>
                     <div className="mx-auto mb-4 h-12 w-12 bg-navy blue-100 rounded-full flex items-center justify-center">
-                      <CheckCircle className="h-6 w-6 text-green-600" />
+                      <CheckCircle className="h-6 w-6 text-navy-600" />
                     </div>
                     <CardTitle className="text-center text-2xl">Message Sent!</CardTitle>
                     <CardDescription className="text-center">
@@ -302,7 +302,7 @@ export default function ContactPage() {
 
                       <Button
                         type="submit"
-                        className="w-full bg-green-600 hover:bg-navy blue-700 text-white"
+                        className="w-full bg-navy-600 hover:bg-navy blue-700 text-white"
                         disabled={isSubmitting}
                       >
                         {isSubmitting ? "Sending..." : "Send Message"}
