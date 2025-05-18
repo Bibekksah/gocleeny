@@ -77,14 +77,14 @@ export default function Home() {
         <div className="container px-4 md:px-6">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold tracking-tight">Our Services</h2>
-            <p className="text-violet-600 mt-4">
+            <p className="text-gray-600 mt-4">
               We offer a range of cleaning services tailored to your specific needs
             </p>
           </div>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
             <div className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-              <div className="h-12 w-12 bg-violet-100 rounded-full flex items-center justify-center mb-4">
-                <Leaf className="h-6 w-6 text-blue-600" />
+              <div className="h-12 w-12 bg-black-100 rounded-full flex items-center justify-center mb-4">
+                <Leaf className="h-6 w-6 text-black-600" />
               </div>
               <h3 className="text-xl font-semibold mb-2">Home Cleaning</h3>
               <p className="text-gray-600 mb-4">Regular cleaning services for a consistently clean home.</p>
@@ -92,24 +92,24 @@ export default function Home() {
               <p className="text-sm text-gray-700 mt-1">20% off for first-time customers</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-              <div className="h-12 w-12 bg-violet-100 rounded-full flex items-center justify-center mb-4">
-                <Sparkles className="h-6 w-6 text-blue-600" />
+              <div className="h-12 w-12 bg-black-100 rounded-full flex items-center justify-center mb-4">
+                <Sparkles className="h-6 w-6 text-black-600" />
               </div>
               <h3 className="text-xl font-semibold mb-2">Office Cleaning</h3>
               <p className="text-gray-600 mb-4">Professional cleaning for workspaces of all sizes.</p>
               <p className="text-violet-600 font-semibold">Custom Quote</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-              <div className="h-12 w-12 bg-violet-100 rounded-full flex items-center justify-center mb-4">
-                <Clock className="h-6 w-6 text-violet-600" />
+              <div className="h-12 w-12 bg-black-100 rounded-full flex items-center justify-center mb-4">
+                <Clock className="h-6 w-6 text-black-600" />
               </div>
               <h3 className="text-xl font-semibold mb-2">End of Tenancy</h3>
               <p className="text-gray-600 mb-4">Deep cleaning when moving in or out of a property.</p>
               <p className="text-violet-600 font-semibold">Custom Quote</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-              <div className="h-12 w-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
-                <Sparkles className="h-6 w-6 text-violet-600" />
+              <div className="h-12 w-12 bg-black-100 rounded-full flex items-center justify-center mb-4">
+                <Sparkles className="h-6 w-6 text-black-600" />
               </div>
               <h3 className="text-xl font-semibold mb-2">Airbnb & Holiday Let</h3>
               <p className="text-gray-600 mb-4">Specialized cleaning for rental properties.</p>
@@ -127,10 +127,10 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-violet-100 text-white">
+      <section className="py-16 bg-violet-800 text-white">
         <div className="container px-4 md:px-6 text-center">
           <h2 className="text-3xl font-bold mb-4">Ready for a Cleaner, Greener Home?</h2>
-          <p className="text-xl mb-8 mt-4 text-justify max-w-md">
+          <p className="text-xl mb-8">
             Book your eco-friendly cleaning service today and enjoy a spotless home without harming the environment.
           </p>
 {/*           <Button size="lg" variant="outline" className="bg-white text-blue-600 hover:bg-gray-100">
