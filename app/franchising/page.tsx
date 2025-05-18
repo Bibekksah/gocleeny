@@ -132,7 +132,7 @@ export default function FranchisingPage() {
           </div>
 
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-            <div className="bg-blue-50 p-6 rounded-lg">
+            <div className="bg-violet-50 p-6 rounded-lg">
               <div className="h-12 w-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
                 <TrendingUp className="h-6 w-6 text-violet-600" />
               </div>
@@ -142,7 +142,7 @@ export default function FranchisingPage() {
                 sustainability.
               </p>
             </div>
-            <div className="bg-blue-50 p-6 rounded-lg">
+            <div className="bg-violet-50 p-6 rounded-lg">
               <div className="h-12 w-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
                 <Users className="h-6 w-6 text-violet-600" />
               </div>
@@ -152,7 +152,7 @@ export default function FranchisingPage() {
                 strategies.
               </p>
             </div>
-            <div className="bg-blue-50 p-6 rounded-lg">
+            <div className="bg-violet-50 p-6 rounded-lg">
               <div className="h-12 w-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
                 <DollarSign className="h-6 w-6 text-violet-600" />
               </div>
@@ -161,7 +161,7 @@ export default function FranchisingPage() {
                 Benefit from our established business model with recurring revenue streams and high customer retention.
               </p>
             </div>
-            <div className="bg-blue-50 p-6 rounded-lg">
+            <div className="bg-violet-50 p-6 rounded-lg">
               <div className="h-12 w-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
                 <Award className="h-6 w-6 text-violet-600" />
               </div>
@@ -175,7 +175,7 @@ export default function FranchisingPage() {
       </section>
 
       {/* Franchise Process */}
-      <section className="py-16 bg-blue-50">
+      <section className="py-16 bg-violet-50">
         
         <div className="container px-4 md:px-6">
           <div className="text-center mb-12">
@@ -267,7 +267,7 @@ export default function FranchisingPage() {
           </div>
 
           <div className="max-w-4xl mx-auto">
-            <div className="bg-blue-50 p-8 rounded-lg">
+            <div className="bg-violet-50 p-8 rounded-lg">
               <div className="grid gap-6 md:grid-cols-2">
                 <div>
                   <h3 className="text-xl font-semibold mb-4">Initial Investment</h3>
@@ -312,7 +312,7 @@ export default function FranchisingPage() {
       </section>
 
       {/* Franchise Inquiry Form */}
-      <section className="py-16 bg-blue-50">
+      <section className="py-16 bg-violet-50">
         {/*
         <div className="container px-4 md:px-6">
           <div className="max-w-3xl mx-auto">
