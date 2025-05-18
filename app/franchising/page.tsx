@@ -126,7 +126,7 @@ export default function FranchisingPage() {
         <div className="container px-4 md:px-6">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold tracking-tight">Why Franchise With GoCleeny?</h2>
-            <p className="text-blue-600 mt-4 max-w-[800px] mx-auto">
+            <p className="text-gray-600 mt-4 max-w-[800px] mx-auto">
               Join a growing brand with a proven business model and comprehensive support
             </p>
           </div>
@@ -134,39 +134,39 @@ export default function FranchisingPage() {
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
             <div className="bg-blue-50 p-6 rounded-lg">
               <div className="h-12 w-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
-                <TrendingUp className="h-6 w-6 text-green-600" />
+                <TrendingUp className="h-6 w-6 text-violet-600" />
               </div>
               <h3 className="text-xl font-semibold mb-2">Growing Industry</h3>
-              <p className="text-blue-600">
+              <p className="text-gray-600">
                 The eco-friendly cleaning industry is experiencing rapid growth as more consumers prioritize
                 sustainability.
               </p>
             </div>
             <div className="bg-blue-50 p-6 rounded-lg">
               <div className="h-12 w-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
-                <Users className="h-6 w-6 text-blue-600" />
+                <Users className="h-6 w-6 text-violet-600" />
               </div>
               <h3 className="text-xl font-semibold mb-2">Comprehensive Training</h3>
-              <p className="text-blue-600">
+              <p className="text-gray-600">
                 Receive thorough training on our eco-friendly cleaning methods, business operations, and marketing
                 strategies.
               </p>
             </div>
             <div className="bg-blue-50 p-6 rounded-lg">
               <div className="h-12 w-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
-                <DollarSign className="h-6 w-6 text-green-600" />
+                <DollarSign className="h-6 w-6 text-violet-600" />
               </div>
               <h3 className="text-xl font-semibold mb-2">Proven Business Model</h3>
-              <p className="text-blue-600">
+              <p className="text-gray-600">
                 Benefit from our established business model with recurring revenue streams and high customer retention.
               </p>
             </div>
             <div className="bg-blue-50 p-6 rounded-lg">
               <div className="h-12 w-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
-                <Award className="h-6 w-6 text-blue-600" />
+                <Award className="h-6 w-6 text-violet-600" />
               </div>
               <h3 className="text-xl font-semibold mb-2">Brand Recognition</h3>
-              <p className="text-blue-600">
+              <p className="text-gray-600">
                 Leverage the GoCleeny brand and reputation for eco-friendly, high-quality cleaning services.
               </p>
             </div>
@@ -180,18 +180,18 @@ export default function FranchisingPage() {
         <div className="container px-4 md:px-6">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold tracking-tight">The Franchise Process</h2>
-            <p className="text-blue-600 mt-4 max-w-[800px] mx-auto">Your journey to owning a GoCleeny franchise</p>
+            <p className="text-gray-600 mt-4 max-w-[800px] mx-auto">Your journey to owning a GoCleeny franchise</p>
           </div>
 
           <div className="max-w-4xl mx-auto">
             <div className="space-y-8">
               <div className="flex flex-col md:flex-row gap-4 items-start">
                 <div className="h-10 w-10 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0 md:mt-2">
-                  <span className="text-blue-600 font-semibold">1</span>
+                  <span className="text-violet-600 font-semibold">1</span>
                 </div>
                 <div className="flex-1">
                   <h3 className="text-xl font-semibold mb-2">Initial Inquiry</h3>
-                  <p className="text-blue-600">
+                  <p className="text-gray-600">
                     Fill out our franchise inquiry form to express your interest. Our franchise development team will
                     contact you to discuss the opportunity in more detail.
                   </p>
@@ -200,11 +200,11 @@ export default function FranchisingPage() {
 
               <div className="flex flex-col md:flex-row gap-4 items-start">
                 <div className="h-10 w-10 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0 md:mt-2">
-                  <span className="text-blue-600 font-semibold">2</span>
+                  <span className="text-violet-600 font-semibold">2</span>
                 </div>
                 <div className="flex-1">
                   <h3 className="text-xl font-semibold mb-2">Discovery Day</h3>
-                  <p className="text-blue-600">
+                  <p className="text-gray-600">
                     Attend a Discovery Day at our headquarters to meet the team, learn more about our business model,
                     and get a firsthand look at our operations.
                   </p>
@@ -213,11 +213,11 @@ export default function FranchisingPage() {
 
               <div className="flex flex-col md:flex-row gap-4 items-start">
                 <div className="h-10 w-10 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0 md:mt-2">
-                  <span className="text-blue-600 font-semibold">3</span>
+                  <span className="text-violet-600 font-semibold">3</span>
                 </div>
                 <div className="flex-1">
                   <h3 className="text-xl font-semibold mb-2">Application & Approval</h3>
-                  <p className="text-blue-600">
+                  <p className="text-gray-600">
                     Complete the franchise application and undergo our approval process. We'll evaluate your
                     qualifications, business experience, and financial capability.
                   </p>
@@ -226,24 +226,25 @@ export default function FranchisingPage() {
 
               <div className="flex flex-col md:flex-row gap-4 items-start">
                 <div className="h-10 w-10 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0 md:mt-2">
-                  <span className="text-blue-600 font-semibold">4</span>
+                  <span className="text-violet-600 font-semibold">4</span>
                 </div>
                 <div className="flex-1">
                   <h3 className="text-xl font-semibold mb-2">Training & Setup</h3>
-                  <p className="text-blue-600">
-                    Once approved, you'll receive comprehensive training on our cleaning methods, business operations,
-                    and marketing strategies. We'll also assist with location selection and setup.
+                  <p className="text-gray-600">
+                    Once approved, you'll receive comprehensive training on our cleaning methods,
+                    business operations,and marketing strategies. We'll also assist with location 
+                    selection and setup.
                   </p>
                 </div>
               </div>
 
               <div className="flex flex-col md:flex-row gap-4 items-start">
                 <div className="h-10 w-10 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0 md:mt-2">
-                  <span className="text-blue-600 font-semibold">5</span>
+                  <span className="text-violet-600 font-semibold">5</span>
                 </div>
                 <div className="flex-1">
                   <h3 className="text-xl font-semibold mb-2">Grand Opening</h3>
-                  <p className="text-blue-600">
+                  <p className="text-gray-600">
                     Launch your GoCleeny franchise with our marketing support and ongoing assistance to ensure a
                     successful start to your business.
                   </p>
@@ -260,7 +261,7 @@ export default function FranchisingPage() {
         <div className="container px-4 md:px-6">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold tracking-tight">Investment Information</h2>
-            <p className="text-blue-600 mt-4 max-w-[800px] mx-auto">
+            <p className="text-gray-600 mt-4 max-w-[800px] mx-auto">
               What you can expect to invest in a GoCleeny franchise
             </p>
           </div>
@@ -282,24 +283,24 @@ export default function FranchisingPage() {
                   <h3 className="text-xl font-semibold mb-4">Ongoing Fees</h3>
                   <ul className="space-y-2">
                     <li className="flex items-start gap-2">
-                      <CheckCircle className="h-5 w-5 text-blue-600 mt-0.5 flex-shrink-0" />
+                      <CheckCircle className="h-5 w-5 text-violet-600 mt-0.5 flex-shrink-0" />
                       <div>
                         <span className="font-medium">Royalty Fee:</span>
-                        <p className="text-blue-600">6% of gross monthly revenue</p>
+                        <p className="text-gray-600">6% of gross monthly revenue</p>
                       </div>
                     </li>
                     <li className="flex items-start gap-2">
-                      <CheckCircle className="h-5 w-5 text-blue-600 mt-0.5 flex-shrink-0" />
+                      <CheckCircle className="h-5 w-5 text-violet-600 mt-0.5 flex-shrink-0" />
                       <div>
                         <span className="font-medium">Marketing Fee:</span>
-                        <p className="text-blue-600">2% of gross monthly revenue</p>
+                        <p className="text-gray-600">2% of gross monthly revenue</p>
                       </div>
                     </li>
                     <li className="flex items-start gap-2">
-                      <CheckCircle className="h-5 w-5 text-blue-600 mt-0.5 flex-shrink-0" />
+                      <CheckCircle className="h-5 w-5 text-violet-600 mt-0.5 flex-shrink-0" />
                       <div>
                         <span className="font-medium">Technology Fee:</span>
-                        <p className="text-blue-600">£150 per month</p>
+                        <p className="text-gray-600">£150 per month</p>
                       </div>
                     </li>
                   </ul>
