@@ -195,16 +195,16 @@ export default function CareersPage() {
         <div className="container px-4 md:px-6">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold tracking-tight">Current Openings</h2>
-            <p className="text-gray-600 mt-4 max-w-[800px] mx-auto">
+            <p className="text-gray-600 mt-4 text-justify max-w-md">
               We're looking for passionate individuals to join our team
             </p>
           </div>
 
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            <div className="bg-violet-50 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+            <div className="bg-violet-50 p-6 rounded-lg ">
               <h3 className="text-xl font-semibold mb-2">Cleaning Specialist</h3>
               <p className="text-gray-500 mb-4">Full-time / Part-time</p>
-              <p className="text-gray-600 mb-4">
+              <p className="text-gray-600 mb-4 text-justify max-w-md">
                 Join our team of cleaning professionals to provide exceptional eco-friendly cleaning services to our
                 clients.
               </p>
@@ -224,10 +224,10 @@ export default function CareersPage() {
               </ul>
             </div>
 
-            <div className="bg-violet-50 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+            <div className="bg-violet-50 p-6 rounded-lg">
               <h3 className="text-xl font-semibold mb-2">Team Lead</h3>
               <p className="text-gray-500 mb-4">Full-time</p>
-              <p className="text-gray-600 mb-4">
+              <p className="text-gray-600 mb-4 text-justify max-w-md">
                 Lead a team of cleaning specialists and ensure the highest quality of service for our clients.
               </p>
               <ul className="space-y-2 mb-4">
@@ -246,10 +246,10 @@ export default function CareersPage() {
               </ul>
             </div>
 
-            <div className="bg-violet-50 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+            <div className="bg-violet-50 p-6 rounded-lg">
               <h3 className="text-xl font-semibold mb-2">Customer Service Representative</h3>
               <p className="text-gray-500 mb-4">Full-time / Remote</p>
-              <p className="text-gray-600 mb-4">
+              <p className="text-gray-600 mb-4 text-justify max-w-md">
                 Handle customer inquiries, schedule appointments, and ensure client satisfaction.
               </p>
               <ul className="space-y-2 mb-4">
