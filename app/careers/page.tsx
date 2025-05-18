@@ -191,11 +191,11 @@ export default function CareersPage() {
       </section>
 
       {/* Current Openings */}
-      <section className="py-16 bg-violet-50">
+      <section className="bg-violet-50 p-6 rounded-lg">
         <div className="container px-4 md:px-6">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold tracking-tight">Current Openings</h2>
-            <p className="text-gray-600 mt-4 text-justify max-w-md">
+            <p className="text-gray-600 mt-4">
               We're looking for passionate individuals to join our team
             </p>
           </div>
