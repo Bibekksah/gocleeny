@@ -201,7 +201,7 @@ export default function CareersPage() {
           </div>
 
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            <div className="bg-blue p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+            <div className="bg-violet-50 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
               <h3 className="text-xl font-semibold mb-2">Cleaning Specialist</h3>
               <p className="text-gray-500 mb-4">Full-time / Part-time</p>
               <p className="text-gray-600 mb-4">
@@ -218,13 +218,13 @@ export default function CareersPage() {
                   <span>Attention to detail and commitment to quality</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <CheckCircle className="h-5 w-5 text-navy blue-600 mt-0.5 flex-shrink-0" />
+                  <CheckCircle className="h-5 w-5 text-violet-600 mt-0.5 flex-shrink-0" />
                   <span>Reliable transportation required</span>
                 </li>
               </ul>
             </div>
 
-            <div className="bg-blue p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+            <div className="bg-violet-50 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
               <h3 className="text-xl font-semibold mb-2">Team Lead</h3>
               <p className="text-gray-500 mb-4">Full-time</p>
               <p className="text-gray-600 mb-4">
@@ -232,21 +232,21 @@ export default function CareersPage() {
               </p>
               <ul className="space-y-2 mb-4">
                 <li className="flex items-start gap-2">
-                  <CheckCircle className="h-5 w-5 text-navy blue-600 mt-0.5 flex-shrink-0" />
+                  <CheckCircle className="h-5 w-5 text-violet-600 mt-0.5 flex-shrink-0" />
                   <span>2+ years of experience in cleaning services</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <CheckCircle className="h-5 w-5 text-navy blue-600 mt-0.5 flex-shrink-0" />
+                  <CheckCircle className="h-5 w-5 text-violet-600 mt-0.5 flex-shrink-0" />
                   <span>Leadership skills and ability to train team members</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <CheckCircle className="h-5 w-5 text-navy blue-600 mt-0.5 flex-shrink-0" />
+                  <CheckCircle className="h-5 w-5 text-violet-600 mt-0.5 flex-shrink-0" />
                   <span>Excellent communication and problem-solving skills</span>
                 </li>
               </ul>
             </div>
 
-            <div className="bg-blue p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+            <div className="bg-violet-50 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
               <h3 className="text-xl font-semibold mb-2">Customer Service Representative</h3>
               <p className="text-gray-500 mb-4">Full-time / Remote</p>
               <p className="text-gray-600 mb-4">
@@ -254,15 +254,15 @@ export default function CareersPage() {
               </p>
               <ul className="space-y-2 mb-4">
                 <li className="flex items-start gap-2">
-                  <CheckCircle className="h-5 w-5 text-navy blue-600 mt-0.5 flex-shrink-0" />
+                  <CheckCircle className="h-5 w-5 text-violet-600 mt-0.5 flex-shrink-0" />
                   <span>Previous customer service experience preferred</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <CheckCircle className="h-5 w-5 text-navy blue-600 mt-0.5 flex-shrink-0" />
+                  <CheckCircle className="h-5 w-5 text-violet-600 mt-0.5 flex-shrink-0" />
                   <span>Excellent communication and organizational skills</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <CheckCircle className="h-5 w-5 text-navy blue-600 mt-0.5 flex-shrink-0" />
+                  <CheckCircle className="h-5 w-5 text-violet-600 mt-0.5 flex-shrink-0" />
                   <span>Proficiency with scheduling software and CRM systems</span>
                 </li>
               </ul>
