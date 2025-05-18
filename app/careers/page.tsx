@@ -191,7 +191,7 @@ export default function CareersPage() {
       </section>
 
       {/* Current Openings */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-violet-50">
         <div className="container px-4 md:px-6">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold tracking-tight">Current Openings</h2>
@@ -210,11 +210,11 @@ export default function CareersPage() {
               </p>
               <ul className="space-y-2 mb-4">
                 <li className="flex items-start gap-2">
-                  <CheckCircle className="h-5 w-5 text-navy blue-600 mt-0.5 flex-shrink-0" />
+                  <CheckCircle className="h-5 w-5 text-violet-600 mt-0.5 flex-shrink-0" />
                   <span>Experience in cleaning services preferred</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <CheckCircle className="h-5 w-5 text-navy blue-600 mt-0.5 flex-shrink-0" />
+                  <CheckCircle className="h-5 w-5 text-violet-600 mt-0.5 flex-shrink-0" />
                   <span>Attention to detail and commitment to quality</span>
                 </li>
                 <li className="flex items-start gap-2">
@@ -272,7 +272,7 @@ export default function CareersPage() {
       </section>
 
       {/* Application Form */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-violet-50">
         {/*
         <div className="container px-4 md:px-6">
           <div className="max-w-3xl mx-auto">
