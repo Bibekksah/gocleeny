@@ -32,20 +32,20 @@ export default function AboutPage() {
             </div>
             <div className="space-y-4">
               <h2 className="text-3xl font-bold tracking-tight">Our Story</h2>
-              <p className="text-gray-600 mb-4 text-justify max-w-md">
-              ""GoCleeny was founded with a simple yet powerful vision: to provide exceptional cleaning services while
+              <p className="text-gray-600 mt-4 text-justify max-w-md">
+                GoCleeny was founded with a simple yet powerful vision: to provide exceptional cleaning services while
                 protecting our environment. We recognized the harmful effects of traditional cleaning products and
-                decided to create a service that prioritizes both cleanliness and sustainability.""
+                decided to create a service that prioritizes both cleanliness and sustainability.
               </p>
               <p className="text-gray-600 mb-4 text-justify max-w-md">
-                ""Since our inception, we've been committed to using only eco-friendly, non-toxic cleaning products that
+                  Since our inception, we've been committed to using only eco-friendly, non-toxic cleaning products that
                   are safe for your family, pets, and the planet. Our team of dedicated professionals shares our passion
-                  for environmental responsibility and delivering outstanding service.""
+                  for environmental responsibility and delivering outstanding service.
               </p>
               <p className="text-gray-600 mb-4 text-justify max-w-md">
-                ""As a proud member of the SAMBIC Group, we leverage industry expertise and resources to continuously
+                  As a proud member of the SAMBIC Group, we leverage industry expertise and resources to continuously
                   improve our services and expand our reach, bringing eco-friendly cleaning to more homes and businesses
-                  across the UK.""
+                  across the UK.
               </p>
             </div>
           </div>
@@ -63,40 +63,40 @@ export default function AboutPage() {
           </div>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
             <div className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-              <div className="h-12 w-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+              <div className="h-12 w-12 bg-violet-100 rounded-full flex items-center justify-center mb-4">
                 <Leaf className="h-6 w-6 text-blue-600" />
               </div>
               <h3 className="text-xl font-semibold mb-2">Sustainability</h3>
               <p className="text-gray-600 mb-4 text-justify max-w-md">
-                ""We're committed to using eco-friendly products and practices that minimize our environmental footprint.""
+                  We're committed to using eco-friendly products and practices that minimize our environmental footprint.
               </p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-              <div className="h-12 w-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+              <div className="h-12 w-12 bg-violet-100 rounded-full flex items-center justify-center mb-4">
                 <Heart className="h-6 w-6 text-blue-600" />
               </div>
               <h3 className="text-xl font-semibold mb-2">Quality</h3>
               <p className="text-gray-600 mb-4 text-justify max-w-md">
-                ""We never compromise on the quality of our service, ensuring every space we clean meets our high
-                  standards.""
+                  We never compromise on the quality of our service, ensuring every space we clean meets our high
+                  standards.
               </p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-              <div className="h-12 w-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+              <div className="h-12 w-12 bg-violet-100 rounded-full flex items-center justify-center mb-4">
                 <Users className="h-6 w-6 text-blue-600" />
               </div>
               <h3 className="text-xl font-semibold mb-2">Integrity</h3>
               <p className="text-gray-600 mb-4 text-justify max-w-md">
-                ""We operate with honesty and transparency in all our interactions with clients and team members.""
+                  We operate with honesty and transparency in all our interactions with clients and team members.
               </p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-              <div className="h-12 w-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+              <div className="h-12 w-12 bg-violet-100 rounded-full flex items-center justify-center mb-4">
                 <Recycle className="h-6 w-6 text-blue-600" />
               </div>
               <h3 className="text-xl font-semibold mb-2">Innovation</h3>
               <p className="text-gray-600 mb-4 text-justify max-w-md">
-                ""We continuously seek better, more sustainable ways to deliver exceptional cleaning services.""
+                  We continuously seek better, more sustainable ways to deliver exceptional cleaning services.
               </p>
             </div>
           </div>
@@ -158,9 +158,9 @@ export default function AboutPage() {
               </div>
               <div>
                 <p className="text-gray-600 mb-4 text-justify max-w-md">
-                  ""As a member of the SAMBIC Group, GoCleeny benefits from shared expertise, resources, and a commitment
+                    As a member of the SAMBIC Group, GoCleeny benefits from shared expertise, resources, and a commitment
                     to excellence. This affiliation allows us to continuously improve our services and expand our reach,
-                    bringing eco-friendly cleaning to more homes and businesses across the UK.""
+                    bringing eco-friendly cleaning to more homes and businesses across the UK.
                 </p>
               </div>
             </div>
