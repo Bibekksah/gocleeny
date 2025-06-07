@@ -104,6 +104,27 @@ export default function ContactPage() {
           </p>
         </div>
       </section>
+      <section>
+          <section className="py-16 bg-white">
+        <div className="container px-4 md:px-6">
+          <div className="grid gap-10 lg:grid-cols-2">
+            {/* Contact Information */}
+            <div>
+              <h2 className="text-3xl font-bold tracking-tight mb-6">🚧 Notice: Contact Form Issue 🚧</h2>
+              <p className="text-gray-600 mt-4 text-justify max-w-md">
+                We're currently experiencing a technical issue with our contact form — it's not functioning as expected.
+                But don’t worry, we’re on it!
+
+                📞 For bookings or inquiries, please reach out to us directly via:
+                👉 Phone: +44 7350479620
+                👉 Email: gocleeny@gmail.com
+
+                We appreciate your patience and will have the contact form back up soon.
+                Thank you for choosing GoCleeny – your trusted cleaning partner! 🧼✨
+                </p>
+              </div>
+            </div>
+                </section>
 
       {/* Contact Form and Info */}
       <section className="py-16 bg-white">
@@ -112,7 +133,7 @@ export default function ContactPage() {
             {/* Contact Information */}
             <div>
               <h2 className="text-3xl font-bold tracking-tight mb-6">Get In Touch</h2>
-              <p className="text-gray-600 mb-8">
+              <p className="text-gray-600 mt-4 text-justify max-w-md">
                 Have questions about our services or want to schedule a cleaning? Fill out the form or contact us
                 directly using the information below.
               </p>
@@ -120,7 +141,7 @@ export default function ContactPage() {
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
                   <div className="h-10 w-10 rounded-full bg-navy blue-100 flex items-center justify-center flex-shrink-0">
-                    <Mail className="h-5 w-5 text-navy-600" />
+                    <Mail className="h-5 w-5 text-violet-600" />
                   </div>
                   <div>
                     <h3 className="font-semibold">Email</h3>
@@ -131,7 +152,7 @@ export default function ContactPage() {
 
                 <div className="flex items-start gap-4">
                   <div className="h-10 w-10 rounded-full bg-navy blue-100 flex items-center justify-center flex-shrink-0">
-                    <Phone className="h-5 w-5 text-navy-600" />
+                    <Phone className="h-5 w-5 text-violet-600" />
                   </div>
                   <div>
                     <h3 className="font-semibold">Phone</h3>
@@ -142,7 +163,7 @@ export default function ContactPage() {
 
                 <div className="flex items-start gap-4">
                   <div className="h-10 w-10 rounded-full bg-navy blue-100 flex items-center justify-center flex-shrink-0">
-                    <MapPin className="h-5 w-5 text-navy-600" />
+                    <MapPin className="h-5 w-5 text-violet-600" />
                   </div>
                   <div>
                     <h3 className="font-semibold">Location</h3>
@@ -177,7 +198,7 @@ export default function ContactPage() {
                   </a>
                   <a
                     href="#"
-                    className="h-10 w-10 rounded-full bg-gray-100 flex items-center justify-center hover:bg-gray-200 transition-colors"
+                    className="h-10 w-10 rounded-full bg-violet-100 flex items-center justify-center hover:bg-gray-200 transition-colors"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -199,7 +220,7 @@ export default function ContactPage() {
                   </a>
                   <a
                     href="#"
-                    className="h-10 w-10 rounded-full bg-gray-100 flex items-center justify-center hover:bg-gray-200 transition-colors"
+                    className="h-10 w-10 rounded-full bg-violet-100 flex items-center justify-center hover:bg-gray-200 transition-colors"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -226,7 +247,7 @@ export default function ContactPage() {
               {isSuccess ? (
                 <Card>
                   <CardHeader>
-                    <div className="mx-auto mb-4 h-12 w-12 bg-navy blue-100 rounded-full flex items-center justify-center">
+                    <div className="mx-auto mb-4 h-12 w-12 bg-violet-100 rounded-full flex items-center justify-center">
                       <CheckCircle className="h-6 w-6 text-navy-600" />
                     </div>
                     <CardTitle className="text-center text-2xl">Message Sent!</CardTitle>
