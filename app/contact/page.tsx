@@ -105,7 +105,7 @@ export default function ContactPage() {
         </div>
       </section>
       <section>
-          <section className="py-16 bg-white">
+        <section className="py-16 bg-white">
         <div className="container px-4 md:px-6">
           <div className="grid gap-10 lg:grid-cols-2">
             {/* Contact Information */}
@@ -124,7 +124,8 @@ export default function ContactPage() {
                 </p>
               </div>
             </div>
-                </section>
+          </div>
+          </section>
 
       {/* Contact Form and Info */}
       <section className="py-16 bg-white">
