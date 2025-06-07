@@ -16,19 +16,19 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 w-full border-b bg-white">
       <div className="container flex h-16 items-center justify-between px-4 md:px-6">
         <Link href="/" className="flex items-center gap-2">
-          <Leaf className="h-6 w-6 text-green-600" />
+          <Leaf className="h-6 w-6 text-Violet-600" />
           <span className="text-xl font-bold">GoCleeny</span>
         </Link>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex gap-6">
-          <Link href="/" className="text-sm font-medium hover:text-green-600 transition-colors">
+          <Link href="/" className="text-sm font-medium hover:text-violet-600 transition-colors">
             Home
           </Link>
-          <Link href="/about" className="text-sm font-medium hover:text-green-600 transition-colors">
+          <Link href="/about" className="text-sm font-medium hover:text-violet-600 transition-colors">
             About Us
           </Link>
-          <Link href="/services" className="text-sm font-medium hover:text-green-600 transition-colors">
+          <Link href="/services" className="text-sm font-medium hover:text-violet-600 transition-colors">
             Services
           </Link>
 {/*           <Link href="/booking" className="text-sm font-medium hover:text-green-600 transition-colors">
@@ -37,13 +37,13 @@ export default function Navbar() {
           <Link href="/my-bookings" className="text-sm font-medium hover:text-green-600 transition-colors">
             My Bookings
           </Link> */}
-          <Link href="/careers" className="text-sm font-medium hover:text-green-600 transition-colors">
+          <Link href="/careers" className="text-sm font-medium hover:text-violet-600 transition-colors">
             Careers
           </Link>
-          <Link href="/franchising" className="text-sm font-medium hover:text-green-600 transition-colors">
+          <Link href="/franchising" className="text-sm font-medium hover:text-violet-600 transition-colors">
             Franchising
           </Link>
-          <Link href="/contact" className="text-sm font-medium hover:text-green-600 transition-colors">
+          <Link href="/contact" className="text-sm font-medium hover:text-violet-600 transition-colors">
             Contact
           </Link>
         </nav>
@@ -60,7 +60,7 @@ export default function Navbar() {
         <div className="fixed inset-0 z-50 bg-white md:hidden">
           <div className="container flex h-16 items-center justify-between px-4">
             <Link href="/" className="flex items-center gap-2">
-              <Leaf className="h-6 w-6 text-green-600" />
+              <Leaf className="h-6 w-6 text-violet-600" />
               <span className="text-xl font-bold">GoCleeny</span>
             </Link>
             <Button variant="ghost" size="icon" onClick={toggleMenu}>
