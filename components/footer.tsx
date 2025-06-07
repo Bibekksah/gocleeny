@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
             <Link href="/" className="flex items-center gap-2 mb-4">
-              <Leaf className="h-6 w-6 text-green-400" />
+              <Leaf className="h-6 w-6 text-Violet-400" />
               <span className="text-xl font-bold text-white">GoCleeny</span>
             </Link>
             <p className="text-gray-400 mb-4">
@@ -91,15 +91,15 @@ export default function Footer() {
             <h3 className="text-white font-semibold mb-4">Contact Us</h3>
             <ul className="space-y-3">
               <li className="flex items-start gap-3">
-                <Mail className="h-5 w-5 text-green-400 mt-0.5" />
+                <Mail className="h-5 w-5 text-violet-400 mt-0.5" />
                 <span className="text-gray-400">gocleeny@gmail.com</span>
               </li>
               <li className="flex items-start gap-3">
-                <Phone className="h-5 w-5 text-green-400 mt-0.5" />
+                <Phone className="h-5 w-5 text-violet-400 mt-0.5" />
                 <span className="text-gray-400">+44 7350479620</span>
               </li>
               <li className="flex items-start gap-3">
-                <MapPin className="h-5 w-5 text-green-400 mt-0.5" />
+                <MapPin className="h-5 w-5 text-violet-400 mt-0.5" />
                 <span className="text-gray-400">
                 Bolton, United Kingdom</span>
               </li>
@@ -111,7 +111,7 @@ export default function Footer() {
           <p className="text-gray-400 text-sm">&copy; {new Date().getFullYear()} GoCleeny. All rights reserved.</p>
            <p className="text-gray-400 text-sm">Created by Interpid Foundation.</p>
           <div className="flex gap-4 mt-4 md:mt-0">
-            <Link href="/privacy" className="text-gray-400 hover:text-white text-sm transition-colors">
+            <Link href="/privacy.html" className="text-gray-400 hover:text-white text-sm transition-colors">
               Privacy Policy
             </Link>
             <Link href="/terms" className="text-gray-400 hover:text-white text-sm transition-colors">
