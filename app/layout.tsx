@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   description: "Professional eco-friendly cleaning services for homes and businesses. Book your cleaning today!",
   generator: 'v0.dev',
   icons: {
-    icon: "/favicon.png",
+    icon: "/favicon.jpeg",
   },
 }
 
