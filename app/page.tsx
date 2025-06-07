@@ -56,9 +56,11 @@ export default function Home() {
                   <p>Flexible scheduling to fit your lifestyle</p>
                 </div>
               </div>
-              <Button variant="outline" className="mt-4">
-                <Link href="/about">Learn More About Us</Link>
-              </Button>
+            <Button className="bg-violet-600 hover:bg-blue-700 text-white">
+              <Link href="/about" className="flex items-center gap-2">
+                 Learn More About Us<ArrowRight className="h-4 w-4" />
+              </Link>
+            </Button>
             </div>
             <div className="relative h-[400px] rounded-lg overflow-hidden">
               <Image
