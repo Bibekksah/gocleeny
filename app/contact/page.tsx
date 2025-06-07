@@ -104,7 +104,7 @@ export default function ContactPage() {
           </p>
         </div>
       </section>
-     <section className="py-16 bg-yellow-50">
+     <section className="py-16 bg-violet-50">
   <div className="container px-4 md:px-6">
     <div className="max-w-2xl mx-auto text-center">
       <div className="inline-flex items-center justify-center gap-2 mb-4 text-yellow-800">
