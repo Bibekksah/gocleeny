@@ -104,28 +104,41 @@ export default function ContactPage() {
           </p>
         </div>
       </section>
-      <section>
-        <section className="py-16 bg-white">
-        <div className="container px-4 md:px-6">
-          <div className="grid gap-10 lg:grid-cols-2">
-            {/* Contact Information */}
-            <div>
-              <h2 className="text-3xl font-bold tracking-tight mb-6">🚧 Notice: Contact Form Issue 🚧</h2>
-              <p className="text-gray-600 mt-4 text-justify max-w-md">
-                We're currently experiencing a technical issue with our contact form — it's not functioning as expected.
-                But don’t worry, we’re on it!
-
-                📞 For bookings or inquiries, please reach out to us directly via:
-                👉 Phone: +44 7350479620
-                👉 Email: gocleeny@gmail.com
-
-                We appreciate your patience and will have the contact form back up soon.
-                Thank you for choosing GoCleeny – your trusted cleaning partner! 🧼✨
-                </p>
-              </div>
-            </div>
-          </div>
-          </section>
+     <section className="py-16 bg-yellow-50">
+  <div className="container px-4 md:px-6">
+    <div className="max-w-2xl mx-auto text-center">
+      <div className="inline-flex items-center justify-center gap-2 mb-4 text-yellow-800">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="h-6 w-6"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          strokeWidth="2"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M12 9v2m0 4h.01M5.07 18.93A10 10 0 1118.93 5.07 10 10 0 015.07 18.93z"
+          />
+        </svg>
+        <h2 className="text-xl font-semibold tracking-tight">Notice: Contact Form Issue</h2>
+      </div>
+      <p className="text-gray-700 text-md leading-relaxed">
+        We're currently facing an issue with our contact form and it may not work properly at the moment.
+        <br className="hidden md:block" />
+        In the meantime, please reach out to us directly via:
+      </p>
+      <div className="mt-4 text-gray-800 font-medium">
+        📞 <span className="text-violet-600">+44 7350 479620</span> <br />
+        📧 <span className="text-violet-600">gocleeny@gmail.com</span>
+      </div>
+      <p className="mt-4 text-gray-600 italic">
+        Thank you for your patience — we're working to resolve the issue as quickly as possible. 🧼✨
+      </p>
+    </div>
+  </div>
+</section>
 
       {/* Contact Form and Info */}
       <section className="py-16 bg-white">
