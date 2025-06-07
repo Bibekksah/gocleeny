@@ -1,3 +1,5 @@
+import './globals.css'
+
 import type React from "react"
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
@@ -10,7 +12,10 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: "GoCleeny - Eco-Friendly Cleaning Services",
   description: "Professional eco-friendly cleaning services for homes and businesses. Book your cleaning today!",
-    generator: 'v0.dev'
+  generator: 'v0.dev',
+  icons: {
+    icon: "/favicon.png",
+  },
 }
 
 export default function RootLayout({
@@ -28,7 +33,3 @@ export default function RootLayout({
     </html>
   )
 }
-
-
-
-import './globals.css'
