@@ -111,7 +111,7 @@ export default function Footer() {
           <p className="text-gray-400 text-sm">&copy; {new Date().getFullYear()} GoCleeny. All rights reserved.</p>
            <p className="text-gray-400 text-sm">Created by Interpid Foundation.</p>
           <div className="flex gap-4 mt-4 md:mt-0">
-            <Link href="/privacy.html" className="text-gray-400 hover:text-white text-sm transition-colors">
+            <Link href="/privacy" className="text-gray-400 hover:text-white text-sm transition-colors">
               Privacy Policy
             </Link>
             <Link href="/terms" className="text-gray-400 hover:text-white text-sm transition-colors">
