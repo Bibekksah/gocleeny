@@ -201,6 +201,17 @@
     </script>
     
     {% block extra_js %}{% endblock %}
+    <!-- In your main HTML (index.html) -->
+<div id="content"></div>
+
+<script>
+  fetch("privacy.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("content").innerHTML = data;
+    });
+</script>
+
 </body>
 </html>
 
