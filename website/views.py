@@ -72,4 +72,6 @@ def franchising(request):
         return redirect('franchising')
     
     return render(request, 'website/franchising.html')
+    def privacy(request):
+    return render(request, 'privacy.html')
 
