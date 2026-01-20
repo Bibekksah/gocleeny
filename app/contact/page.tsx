@@ -1,7 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { useRouter } from "next/navigation";
+import { useState } from "react";
 import Image from "next/image";
 import { Mail, Phone, MapPin, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -9,22 +8,37 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import emailjs from "@emailjs/browser";
+
+type Office = "HEAD" | "BRANCH";
+
+const OFFICE_INFO = {
+  HEAD: {
+    name: "Head Office",
+    email: "gocleeny@gmail.com",
+    phone: "+44 7350 479620",
+    location: "Bolton, United Kingdom",
+    area: "Serving the Greater London area",
+  },
+  BRANCH: {
+    name: "Branch Office",
+    email: "gloucester.gocleeny@gmail.com",
+    phone: "+44 7585 731854",
+    location: "Gloucester, United Kingdom",
+    area: "Serving the Gloucester area",
+  },
+};
 
 export default function ContactPage() {
-  const router = useRouter();
+  const [activeOffice, setActiveOffice] = useState<Office>("HEAD");
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSuccess, setIsSuccess] = useState(false);
   const [errors, setErrors] = useState<Record<string, string>>({});
 
-  useEffect(() => {
-    emailjs.init("LTECK87seUzayyohf"); // Replace with your actual Public Key
-  }, []);
+  const currentOffice = OFFICE_INFO[activeOffice];
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -62,23 +76,21 @@ export default function ContactPage() {
     setIsSubmitting(true);
 
     try {
-      const result = await emailjs.sendForm(
-        "service_mdsgsgl", // Replace with your Service ID
-        "template_qolbloc", // Replace with your Template ID
-        e.target as HTMLFormElement,
-        "LTECK87seUzayyohf" // Replace with your Public Key
+      // Construct Gmail URL
+      const subject = encodeURIComponent(`New Contact Request from ${formData.name}`);
+      const body = encodeURIComponent(
+        `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
       );
-      console.log("EmailJS response:", result);
-      setIsSuccess(true);
+      const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${currentOffice.email}&su=${subject}&body=${body}`;
+
+      // Open Gmail in a new tab
+      window.open(gmailUrl, "_blank");
+
+      // Reset form
       setFormData({ name: "", email: "", message: "" });
-    } catch (error: unknown) {
-      console.error("Error submitting form:", error);
-      if (error instanceof Error) {
-        console.log("Error message:", error.message);
-        console.log("Error stack:", error.stack);
-      }
-      console.log("Raw error:", error);
-      setErrors({ form: "There was an error submitting your message. Please try again." });
+    } catch (error) {
+      console.error("Error opening Gmail:", error);
+      setErrors({ form: "There was an error opening your email client. Please try again." });
     } finally {
       setIsSubmitting(false);
     }
@@ -90,7 +102,7 @@ export default function ContactPage() {
       <section className="relative w-full h-[40vh] flex items-center justify-center">
         <div className="absolute inset-0 z-0">
           <Image
-            src="contact.jpg"
+            src="/contact.jpg"
             alt="Contact Us"
             fill
             className="object-cover brightness-[0.7]"
@@ -104,85 +116,70 @@ export default function ContactPage() {
           </p>
         </div>
       </section>
-     <section className="py-16 bg-violet-50">
-  <div className="container px-4 md:px-6">
-    <div className="max-w-2xl mx-auto text-center">
-      <div className="inline-flex items-center justify-center gap-2 mb-4 text-yellow-800">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className="h-6 w-6"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-          strokeWidth="2"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M12 9v2m0 4h.01M5.07 18.93A10 10 0 1118.93 5.07 10 10 0 015.07 18.93z"
-          />
-        </svg>
-        <h2 className="text-xl font-semibold tracking-tight">Notice: Contact Form Issue</h2>
-      </div>
-      <p className="text-gray-700 text-md leading-relaxed">
-        We're currently facing an issue with our contact form and it may not work properly at the moment.
-        <br className="hidden md:block" />
-        In the meantime, please reach out to us directly via:
-      </p>
-      <div className="mt-4 text-gray-800 font-medium">
-        📞 <span className="text-violet-600">+44 7350 479620</span> <br />
-        📧 <span className="text-violet-600">gocleeny@gmail.com</span>
-      </div>
-      <p className="mt-4 text-gray-600 italic">
-        Thank you for your patience — we're working to resolve the issue as quickly as possible. 🧼✨
-      </p>
-    </div>
-  </div>
-</section>
 
       {/* Contact Form and Info */}
       <section className="py-16 bg-white">
         <div className="container px-4 md:px-6">
+          {/* Office Toggle Buttons - Centered */}
+          <div className="flex justify-center gap-4 mb-12">
+            <Button
+              onClick={() => setActiveOffice("HEAD")}
+              variant={activeOffice === "HEAD" ? "default" : "outline"}
+              className={activeOffice === "HEAD" ? "bg-primary text-white min-w-[140px]" : "min-w-[140px]"}
+            >
+              Head Office
+            </Button>
+            <Button
+              onClick={() => setActiveOffice("BRANCH")}
+              variant={activeOffice === "BRANCH" ? "default" : "outline"}
+              className={activeOffice === "BRANCH" ? "bg-primary text-white min-w-[140px]" : "min-w-[140px]"}
+            >
+              Branch Office
+            </Button>
+          </div>
+
           <div className="grid gap-10 lg:grid-cols-2">
             {/* Contact Information */}
             <div>
               <h2 className="text-3xl font-bold tracking-tight mb-6">Get In Touch</h2>
-              <p className="text-gray-600 mt-4 text-justify max-w-md">
-                Have questions about our services or want to schedule a cleaning? Fill out the form or contact us
-                directly using the information below.
+              <p className="text-gray-600 mt-4 text-justify max-w-md mb-8">
+                Have questions about our services or want to schedule a cleaning? Toggle between our offices and fill out
+                the form or contact us directly using the information below.
               </p>
+
+
 
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
                   <div className="h-10 w-10 rounded-full bg-navy blue-100 flex items-center justify-center flex-shrink-0">
-                    <Mail className="h-5 w-5 text-violet-600" />
+                    <Mail className="h-5 w-5 text-primary" />
                   </div>
                   <div>
                     <h3 className="font-semibold">Email</h3>
-                    <p className="text-gray-600">gocleeny@gmail.com</p>
+                    <p className="text-gray-600">{currentOffice.email}</p>
                     <p className="text-sm text-gray-500 mt-1">We'll respond within 24 hours</p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-4">
                   <div className="h-10 w-10 rounded-full bg-navy blue-100 flex items-center justify-center flex-shrink-0">
-                    <Phone className="h-5 w-5 text-violet-600" />
+                    <Phone className="h-5 w-5 text-primary" />
                   </div>
                   <div>
                     <h3 className="font-semibold">Phone</h3>
-                    <p className="text-gray-600">+44 735-047-9620</p>
+                    <p className="text-gray-600">{currentOffice.phone}</p>
                     <p className="text-sm text-gray-500 mt-1">Available Monday-Friday, 9am-5pm</p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-4">
                   <div className="h-10 w-10 rounded-full bg-navy blue-100 flex items-center justify-center flex-shrink-0">
-                    <MapPin className="h-5 w-5 text-violet-600" />
+                    <MapPin className="h-5 w-5 text-primary" />
                   </div>
                   <div>
                     <h3 className="font-semibold">Location</h3>
-                    <p className="text-gray-600">Bolton, United Kingdom</p>
-                    <p className="text-sm text-gray-500 mt-1">Serving the Greater London area</p>
+                    <p className="text-gray-600">{currentOffice.location}</p>
+                    <p className="text-sm text-gray-500 mt-1">{currentOffice.area}</p>
                   </div>
                 </div>
               </div>
@@ -212,7 +209,7 @@ export default function ContactPage() {
                   </a>
                   <a
                     href="#"
-                    className="h-10 w-10 rounded-full bg-violet-100 flex items-center justify-center hover:bg-gray-200 transition-colors"
+                    className="h-10 w-10 rounded-full bg-blue-50 flex items-center justify-center hover:bg-gray-200 transition-colors"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -258,94 +255,74 @@ export default function ContactPage() {
 
             {/* Contact Form */}
             <div>
-              {isSuccess ? (
-                <Card>
-                  <CardHeader>
-                    <div className="mx-auto mb-4 h-12 w-12 bg-violet-100 rounded-full flex items-center justify-center">
-                      <CheckCircle className="h-6 w-6 text-navy-600" />
-                    </div>
-                    <CardTitle className="text-center text-2xl">Message Sent!</CardTitle>
-                    <CardDescription className="text-center">
-                      Thank you for contacting GoCleeny. We've received your message.
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent className="text-center">
-                    <p>We'll get back to you as soon as possible at {formData.email}.</p>
-                  </CardContent>
-                  <CardFooter className="flex justify-center">
-                    <Button onClick={() => setIsSuccess(false)}>Send Another Message</Button>
-                  </CardFooter>
-                </Card>
-              ) : (
-                <Card>
-                  <CardHeader>
-                    <CardTitle>Send Us a Message</CardTitle>
-                    <CardDescription>
-                      Fill out the form below and we'll get back to you as soon as possible
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <form onSubmit={handleSubmit} className="space-y-6">
-                      <div className="space-y-4">
-                        <div className="grid gap-2">
-                          <Label htmlFor="name">Full Name</Label>
-                          <Input
-                            id="name"
-                            name="name"
-                            placeholder="Enter your full name"
-                            value={formData.name}
-                            onChange={handleChange}
-                            className={errors.name ? "border-red-500" : ""}
-                          />
-                          {errors.name && <p className="text-sm text-red-500">{errors.name}</p>}
-                        </div>
-
-                        <div className="grid gap-2">
-                          <Label htmlFor="email">Email Address</Label>
-                          <Input
-                            id="email"
-                            name="email"
-                            type="email"
-                            placeholder="Enter your email address"
-                            value={formData.email}
-                            onChange={handleChange}
-                            className={errors.email ? "border-red-500" : ""}
-                          />
-                          {errors.email && <p className="text-sm text-red-500">{errors.email}</p>}
-                        </div>
-
-                        <div className="grid gap-2">
-                          <Label htmlFor="message">Message</Label>
-                          <Textarea
-                            id="message"
-                            name="message"
-                            placeholder="How can we help you?"
-                            value={formData.message}
-                            onChange={handleChange}
-                            rows={5}
-                            className={errors.message ? "border-red-500" : ""}
-                          />
-                          {errors.message && <p className="text-sm text-red-500">{errors.message}</p>}
-                        </div>
+              <Card>
+                <CardHeader>
+                  <CardTitle>Send Us a Message ({currentOffice.name})</CardTitle>
+                  <CardDescription>
+                    Fill out the form below and we'll get back to you as soon as possible via Gmail
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <form onSubmit={handleSubmit} className="space-y-6">
+                    <div className="space-y-4">
+                      <div className="grid gap-2">
+                        <Label htmlFor="name">Full Name</Label>
+                        <Input
+                          id="name"
+                          name="name"
+                          placeholder="Enter your full name"
+                          value={formData.name}
+                          onChange={handleChange}
+                          className={errors.name ? "border-red-500" : ""}
+                        />
+                        {errors.name && <p className="text-sm text-red-500">{errors.name}</p>}
                       </div>
 
-                      {errors.form && (
-                        <div className="bg-red-50 p-4 rounded-md">
-                          <p className="text-sm text-red-500">{errors.form}</p>
-                        </div>
-                      )}
+                      <div className="grid gap-2">
+                        <Label htmlFor="email">Email Address</Label>
+                        <Input
+                          id="email"
+                          name="email"
+                          type="email"
+                          placeholder="Enter your email address"
+                          value={formData.email}
+                          onChange={handleChange}
+                          className={errors.email ? "border-red-500" : ""}
+                        />
+                        {errors.email && <p className="text-sm text-red-500">{errors.email}</p>}
+                      </div>
 
-                      <Button
-                        type="submit"
-                        className="w-full bg-violet-600 hover:bg-navy blue-900 text-white"
-                        disabled={isSubmitting}
-                      >
-                        {isSubmitting ? "Sending..." : "Send Message"}
-                      </Button>
-                    </form>
-                  </CardContent>
-                </Card>
-              )}
+                      <div className="grid gap-2">
+                        <Label htmlFor="message">Message</Label>
+                        <Textarea
+                          id="message"
+                          name="message"
+                          placeholder="How can we help you?"
+                          value={formData.message}
+                          onChange={handleChange}
+                          rows={5}
+                          className={errors.message ? "border-red-500" : ""}
+                        />
+                        {errors.message && <p className="text-sm text-red-500">{errors.message}</p>}
+                      </div>
+                    </div>
+
+                    {errors.form && (
+                      <div className="bg-red-50 p-4 rounded-md">
+                        <p className="text-sm text-red-500">{errors.form}</p>
+                      </div>
+                    )}
+
+                    <Button
+                      type="submit"
+                      className="w-full bg-primary hover:bg-primary/90 text-white"
+                      disabled={isSubmitting}
+                    >
+                      {isSubmitting ? "Opening Gmail..." : "Send Message via Gmail"}
+                    </Button>
+                  </form>
+                </CardContent>
+              </Card>
             </div>
           </div>
         </div>

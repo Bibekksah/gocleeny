@@ -2,19 +2,16 @@ import './globals.css'
 
 import type React from "react"
 import type { Metadata } from "next"
-import { Inter } from "next/font/google"
-import "./globals.css"
+
 import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
 
-const inter = Inter({ subsets: ["latin"] })
-
 export const metadata: Metadata = {
-  title: "GoCleeny - Eco-Friendly Cleaning Services",
+  title: "Go Cleeny - Eco-Friendly Cleaning Services",
   description: "Professional eco-friendly cleaning services for homes and businesses. Book your cleaning today!",
   generator: 'v0.dev',
   icons: {
-    icon: "/favicon.jpeg",
+    icon: "/logo.png",
   },
 }
 
@@ -24,8 +21,8 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
+    <html lang="en" suppressHydrationWarning>
+      <body>
         <Navbar />
         {children}
         <Footer />

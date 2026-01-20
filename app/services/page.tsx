@@ -10,7 +10,7 @@ export default function ServicesPage() {
       <section className="relative w-full h-[40vh] flex items-center justify-center">
         <div className="absolute inset-0 z-0">
           <Image
-            src="servicewe.jpeg"
+            src="/servicewe.jpeg"
             alt="Our Services"
             fill
             className="object-cover brightness-[0.7]"
@@ -31,7 +31,7 @@ export default function ServicesPage() {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold tracking-tight">Eco-Friendly Cleaning Solutions</h2>
             <p className="text-gray-600 mt-4 max-w-[800px] mx-auto">
-              At GoCleeny, we offer a comprehensive range of cleaning services using only eco-friendly products and
+              At Go Cleeny, we offer a comprehensive range of cleaning services using only eco-friendly products and
               sustainable practices.
             </p>
           </div>
@@ -43,8 +43,8 @@ export default function ServicesPage() {
         <div className="container px-4 md:px-6">
           <div className="grid gap-12 md:grid-cols-2 items-center">
             <div className="space-y-4">
-              <div className="h-12 w-12 bg-violet-100 rounded-full flex items-center justify-center">
-                <Leaf className="h-6 w-6 text-violet-600" />
+              <div className="h-12 w-12 bg-blue-50 rounded-full flex items-center justify-center">
+                <Leaf className="h-6 w-6 text-primary" />
               </div>
               <h2 className="text-3xl font-bold tracking-tight">Home Cleaning</h2>
               <p className="text-gray-600 mt-4 text-justify max-w-md">
@@ -71,10 +71,10 @@ export default function ServicesPage() {
                 </div>
               </div>
               <div className="mt-6">
-                <p className="text-xl font-semibold text-Violet-600">£15/hr</p>
-                <p className="text-Violet-700 font-medium">20% off for first-time customers</p>
+                <p className="text-xl font-semibold text-primary">From £16/hr</p>
+                <p className="text-primary font-medium">20% off for first-time customers</p>
               </div>
-{/*               <Button className="mt-4 bg-blue-600 hover:bg-blue-700 text-white">
+              {/*               <Button className="mt-4 bg-blue-600 hover:bg-primary/90 text-white">
                 <Link href="/booking" className="flex items-center gap-2">
                   Book Home Cleaning <ArrowRight className="h-4 w-4" />
                 </Link>
@@ -82,7 +82,7 @@ export default function ServicesPage() {
             </div>
             <div className="relative h-[400px] rounded-lg overflow-hidden">
               <Image
-                src="home3.jpeg"
+                src="/home3.jpeg"
                 alt="Home cleaning service"
                 fill
                 className="object-cover"
@@ -98,15 +98,15 @@ export default function ServicesPage() {
           <div className="grid gap-12 md:grid-cols-2 items-center">
             <div className="relative h-[400px] rounded-lg overflow-hidden md:order-first lg:order-last">
               <Image
-                src="office.jpeg"
+                src="/office.jpeg"
                 alt="Office cleaning service"
                 fill
                 className="object-cover"
               />
             </div>
             <div className="space-y-4">
-              <div className="h-12 w-12 bg-violet-100 rounded-full flex items-center justify-center">
-                <Building className="h-6 w-6 text-violet-600" />
+              <div className="h-12 w-12 bg-blue-50 rounded-full flex items-center justify-center">
+                <Building className="h-6 w-6 text-primary" />
               </div>
               <h2 className="text-3xl font-bold tracking-tight">Office Cleaning</h2>
               <p className="text-gray-600 mt-4 text-justify max-w-md">
@@ -134,9 +134,9 @@ export default function ServicesPage() {
               </div>
               <div className="mt-6">
                 <p className="text-xl font-semibold text-black-600">Custom Quote</p>
-                <p className="text-violet-700">Based on office size and cleaning frequency</p>
+                <p className="text-primary">Based on office size and cleaning frequency</p>
               </div>
-              <Button className="mt-4 bg-violet-600 hover:bg-violet-700 text-white">
+              <Button asChild className="mt-4 bg-primary hover:bg-primary/90 text-white">
                 <Link href="/contact" className="flex items-center gap-2">
                   Request a Quote <ArrowRight className="h-4 w-4" />
                 </Link>
@@ -146,13 +146,122 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* End of Tenancy Cleaning */}
-      <section id="tenancy" className="py-16 bg-gray-50">
+      {/* Commercial Cleaning */}
+      <section id="commercial" className="py-16 bg-gray-50">
         <div className="container px-4 md:px-6">
           <div className="grid gap-12 md:grid-cols-2 items-center">
             <div className="space-y-4">
-              <div className="h-12 w-12 bg-violet-100 rounded-full flex items-center justify-center">
-                <Clock className="h-6 w-6 text-violet-600" />
+              <div className="h-12 w-12 bg-blue-50 rounded-full flex items-center justify-center">
+                <Building className="h-6 w-6 text-primary" />
+              </div>
+              <h2 className="text-3xl font-bold tracking-tight">Commercial Cleaning</h2>
+              <p className="text-gray-600 mt-4 text-justify max-w-md">
+                Comprehensive commercial cleaning solutions for businesses of all sizes. From retail spaces to
+                corporate offices, we provide professional cleaning services that maintain a pristine environment
+                for your employees and customers.
+              </p>
+              <div className="space-y-2 mt-4">
+                <div className="flex items-start gap-2">
+                  <CheckCircle className="h-5 w-5 text-black-600 mt-1 flex-shrink-0" />
+                  <p>Full facility cleaning and maintenance</p>
+                </div>
+                <div className="flex items-start gap-2">
+                  <CheckCircle className="h-5 w-5 text-black-600 mt-1 flex-shrink-0" />
+                  <p>Floor care including stripping and waxing</p>
+                </div>
+                <div className="flex items-start gap-2">
+                  <CheckCircle className="h-5 w-5 text-black-600 mt-1 flex-shrink-0" />
+                  <p>Restroom sanitization and restocking</p>
+                </div>
+                <div className="flex items-start gap-2">
+                  <CheckCircle className="h-5 w-5 text-black-600 mt-1 flex-shrink-0" />
+                  <p>Customized cleaning schedules to fit your business</p>
+                </div>
+              </div>
+              <div className="mt-6">
+                <p className="text-xl font-semibold text-black-600">Custom Quote</p>
+                <p className="text-primary">Based on facility size and specific requirements</p>
+              </div>
+              <Button asChild className="mt-4 bg-primary hover:bg-primary/90 text-white">
+                <Link href="/contact" className="flex items-center gap-2">
+                  Request a Quote <ArrowRight className="h-4 w-4" />
+                </Link>
+              </Button>
+            </div>
+            <div className="relative h-[400px] rounded-lg overflow-hidden">
+              <Image
+                src="/commercial_cleaning.png"
+                alt="Commercial cleaning service"
+                fill
+                className="object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Deep Cleaning */}
+      <section id="deep" className="py-16 bg-white">
+
+        <div className="container px-4 md:px-6">
+          <div className="grid gap-12 md:grid-cols-2 items-center">
+            <div className="space-y-4">
+              <div className="h-12 w-12 bg-blue-50 rounded-full flex items-center justify-center">
+                <Sparkles className="h-6 w-6 text-primary" />
+              </div>
+              <h2 className="text-3xl font-bold tracking-tight">Deep Cleaning</h2>
+              <p className="text-gray-600 mt-4 text-justify max-w-md">
+                Our comprehensive deep cleaning service goes beyond regular cleaning to tackle dirt, grime, and buildup
+                in every corner of your space. Perfect for seasonal refreshes or when your property needs extra attention.
+              </p>
+              <div className="space-y-2 mt-4">
+                <div className="flex items-start gap-2">
+                  <CheckCircle className="h-5 w-5 text-black-600 mt-1 flex-shrink-0" />
+                  <p>Intensive cleaning of all surfaces and hidden areas</p>
+                </div>
+                <div className="flex items-start gap-2">
+                  <CheckCircle className="h-5 w-5 text-black-600 mt-1 flex-shrink-0" />
+                  <p>Detailed kitchen and bathroom sanitization</p>
+                </div>
+                <div className="flex items-start gap-2">
+                  <CheckCircle className="h-5 w-5 text-black-600 mt-1 flex-shrink-0" />
+                  <p>Cleaning of appliances, cabinets, and fixtures</p>
+                </div>
+                <div className="flex items-start gap-2">
+                  <CheckCircle className="h-5 w-5 text-black-600 mt-1 flex-shrink-0" />
+                  <p>Eco-friendly products for a thorough, safe clean</p>
+                </div>
+              </div>
+              <div className="mt-6">
+                <p className="text-xl font-semibold text-black-600">Custom Quote</p>
+                <p className="text-primary">Based on property size and cleaning requirements</p>
+              </div>
+              <Button asChild className="mt-4 bg-primary hover:bg-primary/90 text-white">
+                <Link href="/contact" className="flex items-center gap-2">
+                  Request a Quote <ArrowRight className="h-4 w-4" />
+                </Link>
+              </Button>
+            </div>
+            <div className="relative h-[400px] rounded-lg overflow-hidden">
+              <Image
+                src="/deep_cleaning.png"
+                alt="Deep cleaning service"
+                fill
+                className="object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* End of Tenancy Cleaning */}
+      <section id="tenancy" className="py-16 bg-white">
+
+        <div className="container px-4 md:px-6">
+          <div className="grid gap-12 md:grid-cols-2 items-center">
+            <div className="space-y-4">
+              <div className="h-12 w-12 bg-blue-50 rounded-full flex items-center justify-center">
+                <Clock className="h-6 w-6 text-primary" />
               </div>
               <h2 className="text-3xl font-bold tracking-tight">End of Tenancy Cleaning</h2>
               <p className="text-gray-600 mt-4 text-justify max-w-md">
@@ -179,9 +288,9 @@ export default function ServicesPage() {
               </div>
               <div className="mt-6">
                 <p className="text-xl font-semibold text-black-600">Custom Quote</p>
-                <p className="text-violet-700">Based on property size and condition</p>
+                <p className="text-primary">Based on property size and condition</p>
               </div>
-{/*               <Button className="mt-4 bg-blue-600 hover:bg-blue-700 text-white">
+              {/*               <Button className="mt-4 bg-blue-600 hover:bg-primary/90 text-white">
                 <Link href="/booking" className="flex items-center gap-2">
                   Book End of Tenancy Cleaning <ArrowRight className="h-4 w-4" />
                 </Link>
@@ -189,7 +298,7 @@ export default function ServicesPage() {
             </div>
             <div className="relative h-[400px] rounded-lg overflow-hidden">
               <Image
-                src="endof.jpeg"
+                src="/endof.jpeg"
                 alt="End of tenancy cleaning"
                 fill
                 className="object-cover"
@@ -205,15 +314,15 @@ export default function ServicesPage() {
           <div className="grid gap-12 md:grid-cols-2 items-center">
             <div className="relative h-[400px] rounded-lg overflow-hidden md:order-first lg:order-last">
               <Image
-                src="holeday.jpeg"
+                src="/holeday.jpeg"
                 alt="Airbnb cleaning service"
                 fill
                 className="object-cover"
               />
             </div>
             <div className="space-y-4">
-              <div className="h-12 w-12 bg-violet-100 rounded-full flex items-center justify-center">
-                <Sparkles className="h-6 w-6 text-violet-600" />
+              <div className="h-12 w-12 bg-blue-50 rounded-full flex items-center justify-center">
+                <Sparkles className="h-6 w-6 text-primary" />
               </div>
               <h2 className="text-3xl font-bold tracking-tight">Airbnb & Holiday Let Cleaning</h2>
               <p className="text-gray-600 mt-4 text-justify max-w-md">
@@ -240,9 +349,9 @@ export default function ServicesPage() {
               </div>
               <div className="mt-6">
                 <p className="text-xl font-semibold text-black-600">Custom Quote</p>
-                <p className="text-violet-700">Based on property size and services required</p>
+                <p className="text-primary">Based on property size and services required</p>
               </div>
-              <Button className="mt-4 bg-violet-600 hover:bg-violet-700 text-white">
+              <Button asChild className="mt-4 bg-primary hover:bg-primary/90 text-white">
                 <Link href="/contact" className="flex items-center gap-2">
                   Request a Quote <ArrowRight className="h-4 w-4" />
                 </Link>
@@ -253,13 +362,13 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-violet-600 text-white">
+      <section className="py-16 bg-primary text-white">
         <div className="container px-4 md:px-6 text-center">
           <h2 className="text-3xl font-bold mb-4">Ready to Experience Eco-Friendly Cleaning?</h2>
           <p className="text-xl mb-8 max-w-[800px] mx-auto">
-            Book your service today and enjoy a cleaner, greener space with GoCleeny.
+            Book your service today and enjoy a cleaner, greener space with Go Cleeny.
           </p>
-{/*           <Button size="lg" variant="outline" className="bg-white text-violet-600 hover:bg-gray-100">
+          {/*           <Button size="lg" variant="outline" className="bg-white text-violet-600 hover:bg-gray-100">
             <Link href="/booking" className="flex items-center gap-2">
               Book Now <ArrowRight className="h-4 w-4" />
             </Link>

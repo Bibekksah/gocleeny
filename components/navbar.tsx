@@ -5,6 +5,8 @@ import Link from "next/link"
 import { Leaf, Menu, X, Calendar } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
+import Image from "next/image"
+
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
@@ -16,34 +18,34 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 w-full border-b bg-white">
       <div className="container flex h-16 items-center justify-between px-4 md:px-6">
         <Link href="/" className="flex items-center gap-2">
-          <Leaf className="h-6 w-6 text-Violet-600" />
-          <span className="text-xl font-bold">GoCleeny</span>
+          <Image src="/logo.png" alt="Go Cleeny Logo" width={40} height={40} className="object-contain" />
+          <span className="text-xl font-bold text-primary">Go Cleeny</span>
         </Link>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex gap-6">
-          <Link href="/" className="text-sm font-medium hover:text-violet-600 transition-colors">
+          <Link href="/" className="text-sm font-medium hover:text-blue-600 transition-colors">
             Home
           </Link>
-          <Link href="/about" className="text-sm font-medium hover:text-violet-600 transition-colors">
+          <Link href="/about" className="text-sm font-medium hover:text-blue-600 transition-colors">
             About Us
           </Link>
-          <Link href="/services" className="text-sm font-medium hover:text-violet-600 transition-colors">
+          <Link href="/services" className="text-sm font-medium hover:text-blue-600 transition-colors">
             Services
           </Link>
-{/*           <Link href="/booking" className="text-sm font-medium hover:text-green-600 transition-colors">
+          {/*           <Link href="/booking" className="text-sm font-medium hover:text-green-600 transition-colors">
             Booking
           </Link>
           <Link href="/my-bookings" className="text-sm font-medium hover:text-green-600 transition-colors">
             My Bookings
           </Link> */}
-          <Link href="/careers" className="text-sm font-medium hover:text-violet-600 transition-colors">
+          <Link href="/careers" className="text-sm font-medium hover:text-blue-600 transition-colors">
             Careers
           </Link>
-          <Link href="/franchising" className="text-sm font-medium hover:text-violet-600 transition-colors">
+          <Link href="/franchising" className="text-sm font-medium hover:text-blue-600 transition-colors">
             Franchising
           </Link>
-          <Link href="/contact" className="text-sm font-medium hover:text-violet-600 transition-colors">
+          <Link href="/contact" className="text-sm font-medium hover:text-blue-600 transition-colors">
             Contact
           </Link>
         </nav>
@@ -60,8 +62,8 @@ export default function Navbar() {
         <div className="fixed inset-0 z-50 bg-white md:hidden">
           <div className="container flex h-16 items-center justify-between px-4">
             <Link href="/" className="flex items-center gap-2">
-              <Leaf className="h-6 w-6 text-violet-600" />
-              <span className="text-xl font-bold">GoCleeny</span>
+              <Image src="/logo.png" alt="Go Cleeny Logo" width={40} height={40} className="object-contain" />
+              <span className="text-xl font-bold text-primary">Go Cleeny</span>
             </Link>
             <Button variant="ghost" size="icon" onClick={toggleMenu}>
               <X className="h-6 w-6" />

@@ -8,15 +8,15 @@ export default function AboutPage() {
       <section className="relative w-full h-[40vh] flex items-center justify-center">
         <div className="absolute inset-0 z-0">
           <Image
-            src="about.jpeg"
-            alt="About GoCleeny"
+            src="/about.jpeg"
+            alt="About Go Cleeny"
             fill
             className="object-cover brightness-[0.7]"
             priority
           />
         </div>
         <div className="container relative z-10 px-4 md:px-6 flex flex-col items-center text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-white tracking-tight">About GoCleeny</h1>
+          <h1 className="text-4xl md:text-5xl font-bold text-white tracking-tight">About Go Cleeny</h1>
           <p className="text-xl text-white/90 max-w-[800px] mt-4">
             Our mission, values, and commitment to eco-friendly cleaning
           </p>
@@ -28,24 +28,24 @@ export default function AboutPage() {
         <div className="container px-4 md:px-6">
           <div className="grid gap-12 md:grid-cols-2 items-center">
             <div className="relative h-[400px] rounded-lg overflow-hidden">
-              <Image src="our story.jpeg" alt="Our story" fill className="object-cover" />
+              <Image src="/our story.jpeg" alt="Our story" fill className="object-cover" />
             </div>
             <div className="space-y-4">
               <h2 className="text-3xl font-bold tracking-tight">Our Story</h2>
               <p className="text-gray-600 mt-4 text-justify max-w-md">
-                GoCleeny was founded with a simple yet powerful vision: to provide exceptional cleaning services while
+                Go Cleeny was founded with a simple yet powerful vision: to provide exceptional cleaning services while
                 protecting our environment. We recognized the harmful effects of traditional cleaning products and
                 decided to create a service that prioritizes both cleanliness and sustainability.
               </p>
               <p className="text-gray-600 mb-4 text-justify max-w-md">
-                  Since our inception, we've been committed to using only eco-friendly, non-toxic cleaning products that
-                  are safe for your family, pets, and the planet. Our team of dedicated professionals shares our passion
-                  for environmental responsibility and delivering outstanding service.
+                Since our inception, we've been committed to using only eco-friendly, non-toxic cleaning products that
+                are safe for your family, pets, and the planet. Our team of dedicated professionals shares our passion
+                for environmental responsibility and delivering outstanding service.
               </p>
               <p className="text-gray-600 mb-4 text-justify max-w-md">
-                  As a proud member of the SAMBIC Group, we leverage industry expertise and resources to continuously
-                  improve our services and expand our reach, bringing eco-friendly cleaning to more homes and businesses
-                  across the UK.
+                As a proud member of the SAMBIC Group, we leverage industry expertise and resources to continuously
+                improve our services and expand our reach, bringing eco-friendly cleaning to more homes and businesses
+                across the UK.
               </p>
             </div>
           </div>
@@ -58,45 +58,45 @@ export default function AboutPage() {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold tracking-tight">Our Values</h2>
             <p className="text-gray-600 mt-4 max-w-[800px] mx-auto">
-              The principles that guide everything we do at GoCleeny
+              The principles that guide everything we do at Go Cleeny
             </p>
           </div>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
             <div className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-              <div className="h-12 w-12 bg-violet-100 rounded-full flex items-center justify-center mb-4">
-                <Leaf className="h-6 w-6 text-violet-600" />
+              <div className="h-12 w-12 bg-blue-50 rounded-full flex items-center justify-center mb-4">
+                <Leaf className="h-6 w-6 text-primary" />
               </div>
               <h3 className="text-xl font-semibold mb-2">Sustainability</h3>
               <p className="text-gray-600 mb-4 text-justify max-w-md">
-                  We're committed to using eco-friendly products and practices that minimize our environmental footprint.
+                We're committed to using eco-friendly products and practices that minimize our environmental footprint.
               </p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-              <div className="h-12 w-12 bg-violet-100 rounded-full flex items-center justify-center mb-4">
-                <Heart className="h-6 w-6 text-violet-600" />
+              <div className="h-12 w-12 bg-blue-50 rounded-full flex items-center justify-center mb-4">
+                <Heart className="h-6 w-6 text-primary" />
               </div>
               <h3 className="text-xl font-semibold mb-2">Quality</h3>
               <p className="text-gray-600 mb-4 text-justify max-w-md">
-                  We never compromise on the quality of our service, ensuring every space we clean meets our high
-                  standards.
+                We never compromise on the quality of our service, ensuring every space we clean meets our high
+                standards.
               </p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-              <div className="h-12 w-12 bg-violet-100 rounded-full flex items-center justify-center mb-4">
-                <Users className="h-6 w-6 text-violet-600" />
+              <div className="h-12 w-12 bg-blue-50 rounded-full flex items-center justify-center mb-4">
+                <Users className="h-6 w-6 text-primary" />
               </div>
               <h3 className="text-xl font-semibold mb-2">Integrity</h3>
               <p className="text-gray-600 mb-4 text-justify max-w-md">
-                  We operate with honesty and transparency in all our interactions with clients and team members.
+                We operate with honesty and transparency in all our interactions with clients and team members.
               </p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-              <div className="h-12 w-12 bg-violet-100 rounded-full flex items-center justify-center mb-4">
-                <Recycle className="h-6 w-6 text-violet-600" />
+              <div className="h-12 w-12 bg-blue-50 rounded-full flex items-center justify-center mb-4">
+                <Recycle className="h-6 w-6 text-primary" />
               </div>
               <h3 className="text-xl font-semibold mb-2">Innovation</h3>
               <p className="text-gray-600 mb-4 text-justify max-w-md">
-                  We continuously seek better, more sustainable ways to deliver exceptional cleaning services.
+                We continuously seek better, more sustainable ways to deliver exceptional cleaning services.
               </p>
             </div>
           </div>
@@ -110,7 +110,7 @@ export default function AboutPage() {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold tracking-tight">Our Team</h2>
             <p className="text-gray-600 mt-4 max-w-[800px] mx-auto">
-              Meet the dedicated professionals behind GoCleeny's exceptional service
+              Meet the dedicated professionals behind Go Cleeny's exceptional service
             </p>
           </div>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -150,7 +150,7 @@ export default function AboutPage() {
             <div className="flex flex-col md:flex-row items-center gap-6">
               <div className="relative h-[100px] w-[200px]">
                 <Image
-                  src="logo.jpeg"
+                  src="/logo.jpeg"
                   alt="SAMBIC Group logo"
                   fill
                   className="object-contain"
@@ -158,9 +158,9 @@ export default function AboutPage() {
               </div>
               <div>
                 <p className="text-gray-600 mb-4 text-justify max-w-md">
-                    As a member of the SAMBIC Group, GoCleeny benefits from shared expertise, resources, and a commitment
-                    to excellence. This affiliation allows us to continuously improve our services and expand our reach,
-                    bringing eco-friendly cleaning to more homes and businesses across the UK.
+                  As a member of the SAMBIC Group, Go Cleeny benefits from shared expertise, resources, and a commitment
+                  to excellence. This affiliation allows us to continuously improve our services and expand our reach,
+                  bringing eco-friendly cleaning to more homes and businesses across the UK.
                 </p>
               </div>
             </div>
