@@ -33,6 +33,7 @@ export default function ContactPage() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
+    phone: "",
     message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -60,6 +61,7 @@ export default function ContactPage() {
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
       newErrors.email = "Email is invalid";
     }
+    if (!formData.phone.trim()) newErrors.phone = "Phone number is required";
     if (!formData.message.trim()) newErrors.message = "Message is required";
 
     setErrors(newErrors);
@@ -79,7 +81,7 @@ export default function ContactPage() {
       // Construct Gmail URL
       const subject = encodeURIComponent(`New Contact Request from ${formData.name}`);
       const body = encodeURIComponent(
-        `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
+        `Name: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\n\nMessage:\n${formData.message}`
       );
       const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${currentOffice.email}&su=${subject}&body=${body}`;
 
@@ -87,7 +89,7 @@ export default function ContactPage() {
       window.open(gmailUrl, "_blank");
 
       // Reset form
-      setFormData({ name: "", email: "", message: "" });
+      setFormData({ name: "", email: "", phone: "", message: "" });
     } catch (error) {
       console.error("Error opening Gmail:", error);
       setErrors({ form: "There was an error opening your email client. Please try again." });
@@ -266,7 +268,7 @@ export default function ContactPage() {
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="space-y-4">
                       <div className="grid gap-2">
-                        <Label htmlFor="name">Full Name</Label>
+                        <Label htmlFor="name">Full Name *</Label>
                         <Input
                           id="name"
                           name="name"
@@ -279,7 +281,7 @@ export default function ContactPage() {
                       </div>
 
                       <div className="grid gap-2">
-                        <Label htmlFor="email">Email Address</Label>
+                        <Label htmlFor="email">Email Address *</Label>
                         <Input
                           id="email"
                           name="email"
@@ -293,7 +295,21 @@ export default function ContactPage() {
                       </div>
 
                       <div className="grid gap-2">
-                        <Label htmlFor="message">Message</Label>
+                        <Label htmlFor="phone">Phone Number *</Label>
+                        <Input
+                          id="phone"
+                          name="phone"
+                          type="tel"
+                          placeholder="Enter your phone number"
+                          value={formData.phone}
+                          onChange={handleChange}
+                          className={errors.phone ? "border-red-500" : ""}
+                        />
+                        {errors.phone && <p className="text-sm text-red-500">{errors.phone}</p>}
+                      </div>
+
+                      <div className="grid gap-2">
+                        <Label htmlFor="message">Message *</Label>
                         <Textarea
                           id="message"
                           name="message"
