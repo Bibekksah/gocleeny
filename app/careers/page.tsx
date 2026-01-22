@@ -139,7 +139,7 @@ export default function CareersPage() {
             <section className="relative w-full h-[40vh] flex items-center justify-center">
                 <div className="absolute inset-0 z-0">
                     <Image
-                        src="/careers.jpg"
+                        src="/careers.webp"
                         alt="Careers at Go Cleeny"
                         fill
                         className="object-cover brightness-[0.7]"

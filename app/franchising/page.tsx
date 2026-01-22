@@ -106,7 +106,7 @@ export default function FranchisingPage() {
             <section className="relative w-full h-[40vh] flex items-center justify-center">
                 <div className="absolute inset-0 z-0">
                     <Image
-                        src="/fran.jpeg"
+                        src="/fran.webp"
                         alt="Go Cleeny Franchising"
                         fill
                         className="object-cover brightness-[0.7]"

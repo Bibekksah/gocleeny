@@ -8,7 +8,7 @@ export default function AboutPage() {
       <section className="relative w-full h-[40vh] flex items-center justify-center">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/about.jpeg"
+            src="/about.webp"
             alt="About Go Cleeny"
             fill
             className="object-cover brightness-[0.7]"
@@ -28,7 +28,7 @@ export default function AboutPage() {
         <div className="container px-4 md:px-6">
           <div className="grid gap-12 md:grid-cols-2 items-center">
             <div className="relative h-[400px] rounded-lg overflow-hidden">
-              <Image src="/our story.jpeg" alt="Our story" fill className="object-cover" />
+              <Image src="/our story.webp" alt="Our story" fill className="object-cover" />
             </div>
             <div className="space-y-4">
               <h2 className="text-3xl font-bold tracking-tight">Our Story</h2>
@@ -150,7 +150,7 @@ export default function AboutPage() {
             <div className="flex flex-col md:flex-row items-center gap-6">
               <div className="relative h-[100px] w-[200px]">
                 <Image
-                  src="/logo.jpeg"
+                  src="/logo.png"
                   alt="SAMBIC Group logo"
                   fill
                   className="object-contain"

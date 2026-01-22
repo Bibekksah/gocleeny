@@ -10,7 +10,7 @@ export default function ServicesPage() {
       <section className="relative w-full h-[40vh] flex items-center justify-center">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/servicewe.jpeg"
+            src="/servicewe.webp"
             alt="Our Services"
             fill
             className="object-cover brightness-[0.7]"
@@ -82,7 +82,7 @@ export default function ServicesPage() {
             </div>
             <div className="relative h-[400px] rounded-lg overflow-hidden">
               <Image
-                src="/home3.jpeg"
+                src="/home3.webp"
                 alt="Home cleaning service"
                 fill
                 className="object-cover"
@@ -98,7 +98,7 @@ export default function ServicesPage() {
           <div className="grid gap-12 md:grid-cols-2 items-center">
             <div className="relative h-[400px] rounded-lg overflow-hidden md:order-first lg:order-last">
               <Image
-                src="/office.jpeg"
+                src="/office.webp"
                 alt="Office cleaning service"
                 fill
                 className="object-cover"
@@ -190,7 +190,7 @@ export default function ServicesPage() {
             </div>
             <div className="relative h-[400px] rounded-lg overflow-hidden">
               <Image
-                src="/commercial_cleaning.png"
+                src="/commercial_cleaning.webp"
                 alt="Commercial cleaning service"
                 fill
                 className="object-cover"
@@ -244,7 +244,7 @@ export default function ServicesPage() {
             </div>
             <div className="relative h-[400px] rounded-lg overflow-hidden">
               <Image
-                src="/deep_cleaning.png"
+                src="/deep_cleaning.webp"
                 alt="Deep cleaning service"
                 fill
                 className="object-cover"
@@ -298,7 +298,7 @@ export default function ServicesPage() {
             </div>
             <div className="relative h-[400px] rounded-lg overflow-hidden">
               <Image
-                src="/endof.jpeg"
+                src="/endof.webp"
                 alt="End of tenancy cleaning"
                 fill
                 className="object-cover"
@@ -314,7 +314,7 @@ export default function ServicesPage() {
           <div className="grid gap-12 md:grid-cols-2 items-center">
             <div className="relative h-[400px] rounded-lg overflow-hidden md:order-first lg:order-last">
               <Image
-                src="/holeday.jpeg"
+                src="/holeday.webp"
                 alt="Airbnb cleaning service"
                 fill
                 className="object-cover"

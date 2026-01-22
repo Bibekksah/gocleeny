@@ -13,7 +13,7 @@ export default function Home() {
       <section className="relative w-full h-[80vh] flex items-center justify-center">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/home2.jpg"
+            src="/home2.webp"
             alt="Clean home environment"
             fill
             className="object-cover brightness-[0.7]"
@@ -72,7 +72,7 @@ export default function Home() {
             </div>
             <div className="relative h-[400px] rounded-lg overflow-hidden">
               <Image
-                src="/home.png"
+                src="/home.webp"
                 alt="Eco-friendly cleaning"
                 fill
                 className="object-cover"
