@@ -18,7 +18,7 @@ export default function AboutPage() {
         <div className="container relative z-10 px-4 md:px-6 flex flex-col items-center text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-white tracking-tight">About Go Cleeny</h1>
           <p className="text-xl text-white/90 max-w-[800px] mt-4">
-            Our mission, and commitment to eco-friendly cleaning
+            Our mission, values and commitment to eco-friendly cleaning
           </p>
         </div>
       </section>
