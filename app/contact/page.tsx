@@ -123,6 +123,7 @@ export default function ContactPage() {
       <section className="py-16 bg-white">
         <div className="container px-4 md:px-6">
           {/* Office Toggle Buttons - Centered */}
+          <p className="text-center text-gray-500 mb-4">click each button to see details</p>
           <div className="flex justify-center gap-4 mb-12">
             <Button
               onClick={() => setActiveOffice("HEAD")}
