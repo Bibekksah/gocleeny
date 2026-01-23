@@ -63,7 +63,7 @@ export default function AboutPage() {
           </div>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
             <div className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-              <div className="h-12 w-12 bg-blue-50 rounded-full flex items-center justify-center mb-4">
+              <div className="h-12 w-12 bg-primary/5 rounded-full flex items-center justify-center mb-4">
                 <Leaf className="h-6 w-6 text-primary" />
               </div>
               <h3 className="text-xl font-semibold mb-2">Sustainability</h3>
@@ -72,7 +72,7 @@ export default function AboutPage() {
               </p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-              <div className="h-12 w-12 bg-blue-50 rounded-full flex items-center justify-center mb-4">
+              <div className="h-12 w-12 bg-primary/5 rounded-full flex items-center justify-center mb-4">
                 <Heart className="h-6 w-6 text-primary" />
               </div>
               <h3 className="text-xl font-semibold mb-2">Quality</h3>
@@ -82,7 +82,7 @@ export default function AboutPage() {
               </p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-              <div className="h-12 w-12 bg-blue-50 rounded-full flex items-center justify-center mb-4">
+              <div className="h-12 w-12 bg-primary/5 rounded-full flex items-center justify-center mb-4">
                 <Users className="h-6 w-6 text-primary" />
               </div>
               <h3 className="text-xl font-semibold mb-2">Integrity</h3>
@@ -91,7 +91,7 @@ export default function AboutPage() {
               </p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-              <div className="h-12 w-12 bg-blue-50 rounded-full flex items-center justify-center mb-4">
+              <div className="h-12 w-12 bg-primary/5 rounded-full flex items-center justify-center mb-4">
                 <Recycle className="h-6 w-6 text-primary" />
               </div>
               <h3 className="text-xl font-semibold mb-2">Innovation</h3>

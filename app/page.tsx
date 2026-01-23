@@ -41,7 +41,7 @@ export default function Home() {
       </section>
 
       {/* Introduction Section */}
-      <section className="py-16 bg-blue-50">
+      <section className="py-16 bg-primary/5">
         <div className="container px-4 md:px-6">
           <div className="grid gap-12 md:grid-cols-2 items-center">
             <div className="space-y-4">
