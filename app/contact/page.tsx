@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Mail, Phone, MapPin, Facebook, Instagram, Linkedin, Headphones, Ticket, MessageSquare, Send } from "lucide-react";
+import { Mail, Phone, MapPin, Facebook, Instagram, Linkedin, Headphones, Ticket, MessageSquare } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -92,10 +92,6 @@ export default function ContactPage() {
     }
   };
 
-  const handleNewsletterSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    alert("Thank you for subscribing!");
-  };
 
   return (
     <main className="flex flex-col min-h-screen overflow-x-hidden bg-gray-50">
@@ -380,36 +376,11 @@ export default function ContactPage() {
         ></iframe>
 
         {/* Newsletter Bar - Overlapping Map */}
-        <div className="absolute bottom-0 left-0 w-full z-10 translate-y-1/2">
-          <div className="container px-4 md:px-6">
-            <div className="bg-[#2EB8B8] rounded-[2rem] p-8 md:p-12 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-8 relative overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent to-white/10 pointer-events-none"></div>
 
-              <div className="text-white space-y-2 relative z-10 text-center md:text-left">
-                <h2 className="text-2xl md:text-3xl font-bold font-heading">Get Updates & Stay Connected</h2>
-                <h3 className="text-2xl md:text-3xl font-bold font-heading">Subscribe To Our Newsletter</h3>
-              </div>
-
-              <form onSubmit={handleNewsletterSubmit} className="flex flex-col sm:flex-row gap-4 w-full md:w-auto relative z-10">
-                <div className="relative">
-                  <Input
-                    type="email"
-                    placeholder="Email"
-                    className="h-14 w-full md:w-80 rounded-xl bg-white border-0 text-lg px-6 placeholder:text-gray-400 focus-visible:ring-0 focus-visible:ring-offset-0"
-                    required
-                  />
-                </div>
-                <Button type="submit" className="h-14 px-8 bg-primary hover:bg-primary/90 text-white font-bold text-lg rounded-xl shadow-lg uppercase tracking-wider">
-                  Subscribe
-                </Button>
-              </form>
-            </div>
-          </div>
-        </div>
       </section>
 
       {/* Vertical spacer for newsletter overlap */}
-      <div className="h-24 md:h-32 bg-white"></div>
+
 
     </main>
   );
