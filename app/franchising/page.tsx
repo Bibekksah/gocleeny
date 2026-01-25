@@ -1,10 +1,10 @@
 "use client"
 
 import type React from "react"
-
 import { useState } from "react"
+import { motion } from "framer-motion"
 import Image from "next/image"
-import { CheckCircle, TrendingUp, Users, DollarSign, Award } from "lucide-react"
+import { CheckCircle, TrendingUp, Users, DollarSign, Award, ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
@@ -27,7 +27,6 @@ export default function FranchisingPage() {
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
         const { name, value } = e.target
         setFormData((prev) => ({ ...prev, [name]: value }))
-        // Clear error when user types
         if (errors[name]) {
             setErrors((prev) => {
                 const newErrors = { ...prev }
@@ -39,28 +38,15 @@ export default function FranchisingPage() {
 
     const validateForm = () => {
         const newErrors: Record<string, string> = {}
-
-        if (!formData.name.trim()) {
-            newErrors.name = "Name is required"
-        }
-
+        if (!formData.name.trim()) newErrors.name = "Name is required"
         if (!formData.email.trim()) {
             newErrors.email = "Email is required"
         } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
             newErrors.email = "Email is invalid"
         }
-
-        if (!formData.phone.trim()) {
-            newErrors.phone = "Phone number is required"
-        }
-
-        if (!formData.location.trim()) {
-            newErrors.location = "Location is required"
-        }
-
-        if (!formData.investment) {
-            newErrors.investment = "Investment range is required"
-        }
+        if (!formData.phone.trim()) newErrors.phone = "Phone number is required"
+        if (!formData.location.trim()) newErrors.location = "Location is required"
+        if (!formData.investment) newErrors.investment = "Investment range is required"
 
         setErrors(newErrors)
         return Object.keys(newErrors).length === 0
@@ -68,21 +54,12 @@ export default function FranchisingPage() {
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault()
-
-        if (!validateForm()) {
-            return
-        }
-
+        if (!validateForm()) return
         setIsSubmitting(true)
 
         try {
-            // In a real application, you would send this data to your server
-            // For demo purposes, we'll simulate a successful submission
             await new Promise((resolve) => setTimeout(resolve, 1500))
-
-            // In production, you would use a server action or API route to send an email
             console.log("Form submitted:", formData)
-
             setIsSuccess(true)
             setFormData({
                 name: "",
@@ -101,367 +78,141 @@ export default function FranchisingPage() {
     }
 
     return (
-        <main className="flex flex-col min-h-screen">
+        <main className="flex flex-col min-h-screen overflow-x-hidden">
             {/* Hero Section */}
-            <section className="relative w-full h-[40vh] flex items-center justify-center">
+            <section className="relative w-full h-[60vh] flex items-center justify-center">
                 <div className="absolute inset-0 z-0">
                     <Image
                         src="/fran.webp"
                         alt="Go Cleeny Franchising"
                         fill
-                        className="object-cover brightness-[0.7]"
+                        className="object-cover"
                         priority
                     />
+                    <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-black/50 z-10" />
                 </div>
-                <div className="container relative z-10 px-4 md:px-6 flex flex-col items-center text-center">
-                    <h1 className="text-4xl md:text-5xl font-bold text-white tracking-tight">Own a Go Cleeny Franchise</h1>
-                    <p className="text-xl text-white/90 max-w-[800px] mt-4">
-                        Join the eco-friendly cleaning revolution and build a successful business
+                <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8 }}
+                    className="container relative z-10 px-4 md:px-6 flex flex-col items-center text-center"
+                >
+                    <div className="inline-block px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white text-sm font-medium tracking-wide mb-4">
+                        Franchise Opportunities
+                    </div>
+                    <h1 className="text-5xl md:text-7xl font-heading font-bold text-white tracking-tight mb-6">
+                        Scale with Sustainability
+                    </h1>
+                    <p className="text-xl md:text-2xl text-white/90 max-w-2xl font-light">
+                        Join the fastest-growing eco-friendly cleaning network and build a future-proof business.
                     </p>
-                </div>
+                </motion.div>
             </section>
 
             {/* Why Franchise With Us */}
-            <section className="py-16 bg-blue-50">
+            <section className="py-24 bg-white relative">
                 <div className="container px-4 md:px-6">
-                    <div className="text-center mb-12">
-                        <h2 className="text-3xl font-bold tracking-tight">Why Franchise With Go Cleeny?</h2>
-                        <p className="text-gray-600 mt-4 max-w-[800px] mx-auto">
-                            Join a growing brand with a proven business model and comprehensive support
+                    <div className="text-center mb-16 max-w-3xl mx-auto">
+                        <span className="text-primary font-bold tracking-wider uppercase text-sm mb-2 block">Why Partner With Us</span>
+                        <h2 className="text-3xl md:text-4xl font-heading font-bold tracking-tight text-gray-900 mb-6">
+                            A Proven Model for Success
+                        </h2>
+                        <p className="text-xl text-gray-600 leading-relaxed">
+                            We provide the blueprint, brand, and backing you need to thrive in the green economy.
                         </p>
                     </div>
 
                     <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-                        <div className="bg-blue-50 p-6 rounded-lg">
-                            <div className="h-12 w-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
-                                <TrendingUp className="h-6 w-6 text-primary" />
-                            </div>
-                            <h3 className="text-xl font-semibold mb-2">Growing Industry</h3>
-                            <p className="text-gray-600">
-                                The eco-friendly cleaning industry is experiencing rapid growth as more consumers prioritize
-                                sustainability.
-                            </p>
-                        </div>
-                        <div className="bg-blue-50 p-6 rounded-lg">
-                            <div className="h-12 w-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
-                                <Users className="h-6 w-6 text-primary" />
-                            </div>
-                            <h3 className="text-xl font-semibold mb-2">Comprehensive Training</h3>
-                            <p className="text-gray-600">
-                                Receive thorough training on our eco-friendly cleaning methods, business operations, and marketing
-                                strategies.
-                            </p>
-                        </div>
-                        <div className="bg-blue-50 p-6 rounded-lg">
-                            <div className="h-12 w-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
-                                <DollarSign className="h-6 w-6 text-primary" />
-                            </div>
-                            <h3 className="text-xl font-semibold mb-2">Proven Business Model</h3>
-                            <p className="text-gray-600">
-                                Benefit from our established business model with recurring revenue streams and high customer retention.
-                            </p>
-                        </div>
-                        <div className="bg-blue-50 p-6 rounded-lg">
-                            <div className="h-12 w-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
-                                <Award className="h-6 w-6 text-primary" />
-                            </div>
-                            <h3 className="text-xl font-semibold mb-2">Brand Recognition</h3>
-                            <p className="text-gray-600">
-                                Leverage the Go Cleeny brand and reputation for eco-friendly, high-quality cleaning services.
-                            </p>
-                        </div>
+                        {[
+                            { icon: TrendingUp, title: "Growing Industry", desc: "Capitalize on the surging demand for green cleaning services." },
+                            { icon: Users, title: "Full Support", desc: "Comprehensive training in operations, sales, and eco-standards." },
+                            { icon: DollarSign, title: "High ROI", desc: "Recurring revenue model with maximized profit margins." },
+                            { icon: Award, title: "Premium Brand", desc: "Leverage Go Cleeny's reputation for excellence and trust." }
+                        ].map((item, index) => (
+                            <motion.div
+                                key={index}
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ delay: index * 0.1 }}
+                                className="bg-gray-50 p-8 rounded-2xl border border-gray-100 hover:shadow-premium-hover transition-all duration-300 hover:-translate-y-1 group"
+                            >
+                                <div className="h-14 w-14 bg-white rounded-xl shadow-sm flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                                    <item.icon className="h-7 w-7 text-primary group-hover:text-white" />
+                                </div>
+                                <h3 className="text-xl font-bold mb-3 font-heading">{item.title}</h3>
+                                <p className="text-gray-600 leading-relaxed">{item.desc}</p>
+                            </motion.div>
+                        ))}
                     </div>
                 </div>
             </section>
 
             {/* Franchise Process */}
-            <section className="py-16 bg-blue-50">
+            <section className="py-24 bg-gray-50 relative overflow-hidden">
+                {/* Background decoration */}
+                <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-3xl pointer-events-none -mr-32 -mt-32"></div>
 
-                <div className="container px-4 md:px-6">
-                    <div className="text-center mb-12">
-                        <h2 className="text-3xl font-bold tracking-tight">The Franchise Process</h2>
-                        <p className="text-gray-600 mt-4 max-w-[800px] mx-auto">Your journey to owning a Go Cleeny franchise</p>
-                    </div>
-
-                    <div className="max-w-4xl mx-auto">
-                        <div className="space-y-8">
-                            <div className="flex flex-col md:flex-row gap-4 items-start">
-                                <div className="h-10 w-10 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0 md:mt-2">
-                                    <span className="text-primary font-semibold">1</span>
-                                </div>
-                                <div className="flex-1">
-                                    <h3 className="text-xl font-semibold mb-2">Initial Inquiry</h3>
-                                    <p className="text-gray-600">
-                                        Fill out our franchise inquiry form to express your interest. Our franchise development team will
-                                        contact you to discuss the opportunity in more detail.
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div className="flex flex-col md:flex-row gap-4 items-start">
-                                <div className="h-10 w-10 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0 md:mt-2">
-                                    <span className="text-primary font-semibold">2</span>
-                                </div>
-                                <div className="flex-1">
-                                    <h3 className="text-xl font-semibold mb-2">Discovery Day</h3>
-                                    <p className="text-gray-600">
-                                        Attend a Discovery Day at our headquarters to meet the team, learn more about our business model,
-                                        and get a firsthand look at our operations.
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div className="flex flex-col md:flex-row gap-4 items-start">
-                                <div className="h-10 w-10 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0 md:mt-2">
-                                    <span className="text-primary font-semibold">3</span>
-                                </div>
-                                <div className="flex-1">
-                                    <h3 className="text-xl font-semibold mb-2">Application & Approval</h3>
-                                    <p className="text-gray-600">
-                                        Complete the franchise application and undergo our approval process. We'll evaluate your
-                                        qualifications, business experience, and financial capability.
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div className="flex flex-col md:flex-row gap-4 items-start">
-                                <div className="h-10 w-10 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0 md:mt-2">
-                                    <span className="text-primary font-semibold">4</span>
-                                </div>
-                                <div className="flex-1">
-                                    <h3 className="text-xl font-semibold mb-2">Training & Setup</h3>
-                                    <p className="text-gray-600">
-                                        Once approved, you'll receive comprehensive training on our cleaning methods,
-                                        business operations,and marketing strategies. We'll also assist with location
-                                        selection and setup.
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div className="flex flex-col md:flex-row gap-4 items-start">
-                                <div className="h-10 w-10 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0 md:mt-2">
-                                    <span className="text-primary font-semibold">5</span>
-                                </div>
-                                <div className="flex-1">
-                                    <h3 className="text-xl font-semibold mb-2">Grand Opening</h3>
-                                    <p className="text-gray-600">
-                                        Launch your Go Cleeny franchise with our marketing support and ongoing assistance to ensure a
-                                        successful start to your business.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* Investment Information */}
-            <section className="py-16 bg-blue-50">
-
-                <div className="container px-4 md:px-6">
-                    <div className="text-center mb-12">
-                        <h2 className="text-3xl font-bold tracking-tight">Investment Information</h2>
-                        <p className="text-gray-600 mt-4 max-w-[800px] mx-auto">
-                            What you can expect to invest in a Go Cleeny franchise
+                <div className="container px-4 md:px-6 relative z-10">
+                    <div className="text-center mb-16">
+                        <h2 className="text-3xl md:text-4xl font-heading font-bold tracking-tight text-gray-900">Your Journey to Ownership</h2>
+                        <p className="text-gray-600 mt-4 max-w-2xl mx-auto text-lg">
+                            Five steps to launching your own Go Cleeny franchise.
                         </p>
                     </div>
 
-                    <div className="max-w-4xl mx-auto">
-                        <div className="bg-blue-50 p-8 rounded-lg">
-                            <div className="grid gap-6 md:grid-cols-2">
-                                <div>
-                                    <h3 className="text-xl font-semibold mb-4">Initial Investment</h3>
-                                    <p className="text-gray-600 mb-4">
-                                        The total initial investment for a Go Cleeny franchise typically ranges from £25,00 to £5000,
-                                        depending on your location and market size.
-                                    </p>
-                                    <p className="text-gray-600">
-                                        This includes the franchise fee, equipment, initial inventory, marketing, and working capital.
-                                    </p>
+                    <div className="max-w-4xl mx-auto space-y-12">
+                        {[
+                            { title: "Initial Inquiry", desc: "Connect with our development team to discuss the opportunity." },
+                            { title: "Discovery Day", desc: "Visit our HQ, meet the leadership, and see operations in action." },
+                            { title: "Application & Approval", desc: "We evaluate your fit, experience, and financial capability." },
+                            { title: "Training & Setup", desc: "Intensive program covering all aspects of the business." },
+                            { title: "Grand Opening", desc: "Launch with a marketing blitz and on-site support." }
+                        ].map((step, i) => (
+                            <motion.div
+                                key={i}
+                                initial={{ opacity: 0, x: -20 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ delay: i * 0.1 }}
+                                className="flex flex-col md:flex-row gap-6 items-start relative group"
+                            >
+                                <div className="hidden md:block absolute left-6 top-16 bottom-[-48px] w-0.5 bg-gray-200 last:hidden"></div>
+                                <div className="h-12 w-12 rounded-full bg-white border-2 border-primary/20 flex items-center justify-center flex-shrink-0 z-10 group-hover:border-primary group-hover:scale-110 transition-all duration-300 shadow-sm">
+                                    <span className="text-primary font-bold text-lg">{i + 1}</span>
                                 </div>
-                                <div>
-                                    <h3 className="text-xl font-semibold mb-4">Ongoing Fees</h3>
-                                    <ul className="space-y-2">
-                                        <li className="flex items-start gap-2">
-                                            <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                                            <div>
-                                                <span className="font-medium">Royalty Fee:</span>
-                                                <p className="text-gray-600">6% of gross monthly revenue</p>
-                                            </div>
-                                        </li>
-                                        <li className="flex items-start gap-2">
-                                            <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                                            <div>
-                                                <span className="font-medium">Marketing Fee:</span>
-                                                <p className="text-gray-600">2% of gross monthly revenue</p>
-                                            </div>
-                                        </li>
-                                        <li className="flex items-start gap-2">
-                                            <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                                            <div>
-                                                <span className="font-medium">Technology Fee:</span>
-                                                <p className="text-gray-600">£150 per month</p>
-                                            </div>
-                                        </li>
-                                    </ul>
+                                <div className="flex-1 bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+                                    <h3 className="text-xl font-bold mb-2 font-heading text-gray-900">{step.title}</h3>
+                                    <p className="text-gray-600">{step.desc}</p>
                                 </div>
-                            </div>
-                        </div>
+                            </motion.div>
+                        ))}
                     </div>
                 </div>
             </section>
 
-            {/* Franchise Inquiry Form */}
-            <section className="py-16 bg-blue-50">
-                {/*
-        <div className="container px-4 md:px-6">
-          <div className="max-w-3xl mx-auto">
-            <div className="text-center mb-10">
-              <h2 className="text-3xl font-bold tracking-tight mb-2">Interested in Owning a Franchise?</h2>
-              <p className="text-gray-600">
-                Fill out the form below to learn more about Go Cleeny franchise opportunities
-              </p>
-            </div>
-
-            {isSuccess ? (
-              <Card>
-                <CardHeader>
-                  <div className="mx-auto mb-4 h-12 w-12 bg-green-100 rounded-full flex items-center justify-center">
-                    <CheckCircle className="h-6 w-6 text-green-600" />
-                  </div>
-                  <CardTitle className="text-center text-2xl">Inquiry Submitted!</CardTitle>
-                  <CardDescription className="text-center">
-                    Thank you for your interest in Go Cleeny franchising.
-                  </CardDescription>
-                </CardHeader>
-                <CardContent className="text-center">
-                  <p className="mb-4">
-                    We've received your inquiry and a member of our franchise development team will contact you at{" "}
-                    {formData.email} within 2 business days.
-                  </p>
-                  <p>We look forward to discussing this exciting opportunity with you!</p>
-                </CardContent>
-                <CardFooter className="flex justify-center">
-                  <Button onClick={() => setIsSuccess(false)}>Submit Another Inquiry</Button>
-                </CardFooter>
-              </Card>
-            ) : (
-              <Card>
-                <CardHeader>
-                  <CardTitle>Franchise Inquiry</CardTitle>
-                  <CardDescription>
-                    Please provide your information to learn more about our franchise opportunities
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <form onSubmit={handleSubmit} className="space-y-6">
-                    <div className="space-y-4">
-                      <div className="grid gap-2">
-                        <Label htmlFor="name">Full Name</Label>
-                        <Input
-                          id="name"
-                          name="name"
-                          placeholder="Enter your full name"
-                          value={formData.name}
-                          onChange={handleChange}
-                          className={errors.name ? "border-red-500" : ""}
-                        />
-                        {errors.name && <p className="text-sm text-red-500">{errors.name}</p>}
-                      </div>
-
-                      <div className="grid gap-2">
-                        <Label htmlFor="email">Email Address</Label>
-                        <Input
-                          id="email"
-                          name="email"
-                          type="email"
-                          placeholder="Enter your email address"
-                          value={formData.email}
-                          onChange={handleChange}
-                          className={errors.email ? "border-red-500" : ""}
-                        />
-                        {errors.email && <p className="text-sm text-red-500">{errors.email}</p>}
-                      </div>
-
-                      <div className="grid gap-2">
-                        <Label htmlFor="phone">Phone Number</Label>
-                        <Input
-                          id="phone"
-                          name="phone"
-                          placeholder="Enter your phone number"
-                          value={formData.phone}
-                          onChange={handleChange}
-                          className={errors.phone ? "border-red-500" : ""}
-                        />
-                        {errors.phone && <p className="text-sm text-red-500">{errors.phone}</p>}
-                      </div>
-
-                      <div className="grid gap-2">
-                        <Label htmlFor="location">Preferred Location</Label>
-                        <Input
-                          id="location"
-                          name="location"
-                          placeholder="Enter your preferred franchise location"
-                          value={formData.location}
-                          onChange={handleChange}
-                          className={errors.location ? "border-red-500" : ""}
-                        />
-                        {errors.location && <p className="text-sm text-red-500">{errors.location}</p>}
-                      </div>
-
-                      <div className="grid gap-2">
-                        <Label htmlFor="investment">Available Investment</Label>
-                        <select
-                          id="investment"
-                          name="investment"
-                          value={formData.investment}
-                          onChange={handleChange}
-                          className={`flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 ${errors.investment ? "border-red-500" : ""}`}
-                        >
-                          <option value="">Select investment range</option>
-                          <option value="25k-50k">£25,000 - £50,000</option>
-                          <option value="50k-75k">£50,000 - £75,000</option>
-                          <option value="75k-100k">£75,000 - £100,000</option>
-                          <option value="100k+">£100,000+</option>
-                        </select>
-                        {errors.investment && <p className="text-sm text-red-500">{errors.investment}</p>}
-                      </div>
-
-                      <div className="grid gap-2">
-                        <Label htmlFor="message">Additional Information</Label>
-                        <Textarea
-                          id="message"
-                          name="message"
-                          placeholder="Tell us about your business experience and why you're interested in a Go Cleeny franchise"
-                          value={formData.message}
-                          onChange={handleChange}
-                          rows={4}
-                        />
-                      </div>
+            {/* CTA / Investment Teaser */}
+            <section className="py-24 relative overflow-hidden">
+                <div className="absolute inset-0 bg-primary">
+                    <div className="absolute inset-0 bg-black/10 mix-blend-overlay" />
+                    {/* Abstract shapes */}
+                    <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-white/5 rounded-full blur-3xl transform translate-x-1/2 -translate-y-1/2"></div>
+                </div>
+                <div className="container relative z-10 px-4 md:px-6 text-center text-white">
+                    <h2 className="text-4xl md:text-5xl font-heading font-bold mb-8">Ready to Start?</h2>
+                    <p className="text-xl text-white/90 max-w-2xl mx-auto mb-12 font-light">
+                        Initial investments start from £25,000. Secure your territory today.
+                    </p>
+                    <div className="bg-white/10 backdrop-blur-md border border-white/20 p-8 rounded-2xl max-w-3xl mx-auto text-left hidden">
+                        {/* Hiding the detailed investment table for now, focusing on the CTA */}
                     </div>
-
-                    {errors.form && (
-                      <div className="bg-red-50 p-4 rounded-md">
-                        <p className="text-sm text-red-500">{errors.form}</p>
-                      </div>
-                    )}
-
-                    <Button
-                      type="submit"
-                      className="w-full bg-primary hover:bg-primary/90 text-white"
-                      disabled={isSubmitting}
-                    >
-                      {isSubmitting ? "Submitting..." : "Submit Inquiry"}
+                    <Button asChild size="lg" className="bg-white text-primary hover:bg-gray-100 text-lg px-10 h-14 rounded-full shadow-2xl">
+                        <a href="#contact-form">
+                            View Franchise Brochure <ArrowRight className="ml-2 h-5 w-5" />
+                        </a>
                     </Button>
-                  </form>
-                </CardContent>
-              </Card>
-            )}
-          </div>
-        </div>
-        */}
+                </div>
             </section>
         </main>
     )
 }
-

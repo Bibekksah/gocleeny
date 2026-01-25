@@ -1,3 +1,4 @@
+import { Outfit, Inter } from "next/font/google"
 import './globals.css'
 
 import type React from "react"
@@ -5,6 +6,18 @@ import type { Metadata } from "next"
 
 import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
+
+const outfit = Outfit({
+  subsets: ["latin"],
+  variable: "--font-outfit",
+  display: "swap",
+})
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
+})
 
 export const metadata: Metadata = {
   title: "Go Cleeny - Eco-Friendly Cleaning Services",
@@ -24,7 +37,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body>
+      <body className={`${outfit.variable} ${inter.variable} font-sans antialiased`}>
         <Navbar />
         {children}
         <Footer />

@@ -4,31 +4,46 @@ import { Mail, Phone, MapPin, Facebook, Instagram, Linkedin } from "lucide-react
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-gray-200">
-      <div className="container px-4 md:px-6 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <div>
-            <Link href="/" className="flex items-center gap-2 mb-4">
-              <Image src="/logo.png" alt="Go Cleeny Logo" width={32} height={32} className="object-contain" />
-              <span className="text-xl font-bold text-white">Go Cleeny</span>
+    <footer className="bg-primary text-white border-t border-white/10 relative overflow-hidden">
+      {/* Background decoration */}
+      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-white/5 rounded-full blur-3xl pointer-events-none -mr-32 -mt-32"></div>
+
+      <div className="container relative z-10 px-4 md:px-6 py-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="space-y-2">
+            <Link href="/" className="flex items-center gap-2 group">
+              <div className="glass p-2 rounded-xl bg-white/10 group-hover:bg-white/20 transition-colors">
+                <Image src="/logo.png" alt="Go Cleeny Logo" width={48} height={48} className="object-contain" />
+              </div>
+              <span className="text-xl font-bold text-white font-heading tracking-tight">Go Cleeny</span>
             </Link>
-            <p className="text-gray-400 mb-4">
-              Eco-friendly cleaning services for homes and businesses. We care for your space and the planet.
+            <p className="text-white/70 leading-relaxed">
+              Elevating hygiene standards with a conscience. Eco-friendly cleaning for homes and businesses that value the future.
             </p>
-            <div className="flex space-x-4">
-              <Link href="https://www.facebook.com/share/1DUpsW2TnA/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
-                <Facebook className="h-5 w-5" />
-                <span className="sr-only">Facebook</span>
-              </Link>
-              <Link href="https://www.instagram.com/gocleeny_uk?igsh=MTcxazFoaWNuM3c5dg==" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
-                <Instagram className="h-5 w-5" />
-                <span className="sr-only">Instagram</span>
-              </Link>
-              <Link href="https://www.linkedin.com/company/go-cleeny/about/?viewAsMember=true" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
-                <Linkedin className="h-5 w-5" />
-                <span className="sr-only">LinkedIn</span>
-              </Link>
-              <Link href="https://www.tiktok.com/@go.cleeny.uk?_r=1&_t=ZN-93EiLV3jmwY" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
+            <div className="flex gap-4 pt-2">
+              {[
+                { icon: Facebook, href: "https://www.facebook.com/share/1DUpsW2TnA/?mibextid=wwXIfr", label: "Facebook" },
+                { icon: Instagram, href: "https://www.instagram.com/gocleeny_uk?igsh=MTcxazFoaWNuM3c5dg==", label: "Instagram" },
+                { icon: Linkedin, href: "https://www.linkedin.com/company/go-cleeny/about/?viewAsMember=true", label: "LinkedIn" },
+              ].map((social, i) => (
+                <Link
+                  key={i}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-white/10 p-2.5 rounded-full hover:bg-white hover:text-primary transition-all duration-300 group"
+                  aria-label={social.label}
+                >
+                  <social.icon className="h-5 w-5" />
+                </Link>
+              ))}
+              <Link
+                href="https://www.tiktok.com/@go.cleeny.uk?_r=1&_t=ZN-93EiLV3jmwY"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-white/10 p-2.5 rounded-full hover:bg-white hover:text-primary transition-all duration-300 group"
+                aria-label="TikTok"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -43,118 +58,89 @@ export default function Footer() {
                 >
                   <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" />
                 </svg>
-                <span className="sr-only">TikTok</span>
               </Link>
             </div>
           </div>
 
           <div>
-            <h3 className="text-white font-semibold mb-4">Quick Links</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link href="/" className="text-gray-400 hover:text-white transition-colors">
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link href="/about" className="text-gray-400 hover:text-white transition-colors">
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link href="/services" className="text-gray-400 hover:text-white transition-colors">
-                  Services
-                </Link>
-              </li>
-              {/*               <li>
-                <Link href="/booking" className="text-gray-400 hover:text-white transition-colors">
-                  Book a Cleaning
-                </Link>
-              </li> */}
-              <li>
-                <Link href="/contact" className="text-gray-400 hover:text-white transition-colors">
-                  Contact Us
-                </Link>
-              </li>
+            <h3 className="text-base font-bold font-heading mb-2 border-l-4 border-green-400 pl-3">Quick Links</h3>
+            <ul className="space-y-1">
+              {["Home", "About Us", "Services", "Contact Us"].map((item) => {
+                const href = item === "Home" ? "/" : item === "About Us" ? "/about" : item === "Contact Us" ? "/contact" : "/services";
+                return (
+                  <li key={item}>
+                    <Link href={href} className="text-white/70 hover:text-white hover:translate-x-1 transition-all inline-block">
+                      {item}
+                    </Link>
+                  </li>
+                )
+              })}
             </ul>
           </div>
 
           <div>
-            <h3 className="text-white font-semibold mb-4">Our Services</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link href="/services#home" className="text-gray-400 hover:text-white transition-colors">
-                  Home Cleaning
-                </Link>
-              </li>
-              <li>
-                <Link href="/services#office" className="text-gray-400 hover:text-white transition-colors">
-                  Office Cleaning
-                </Link>
-              </li>
-              <li>
-                <Link href="/services#commercial" className="text-gray-400 hover:text-white transition-colors">
-                  Commercial Cleaning
-                </Link>
-              </li>
-              <li>
-                <Link href="/services#deep" className="text-gray-400 hover:text-white transition-colors">
-                  Deep Cleaning
-                </Link>
-              </li>
-              <li>
-                <Link href="/services#tenancy" className="text-gray-400 hover:text-white transition-colors">
-                  End of Tenancy Cleaning
-                </Link>
-              </li>
-              <li>
-                <Link href="/services#airbnb" className="text-gray-400 hover:text-white transition-colors">
-                  Airbnb & Holiday Let Cleaning
-                </Link>
-              </li>
+            <h3 className="text-base font-bold font-heading mb-2 border-l-4 border-green-400 pl-3">Our Expertise</h3>
+            <ul className="space-y-1">
+              {[
+                { label: "Home Cleaning", href: "/services#home" },
+                { label: "Office Cleaning", href: "/services#office" },
+                { label: "Commercial Cleaning", href: "/services#commercial" },
+                { label: "Deep Cleaning", href: "/services#deep" },
+                { label: "End of Tenancy", href: "/services#tenancy" },
+                { label: "Airbnb & Holiday Let", href: "/services#airbnb" },
+              ].map((service) => (
+                <li key={service.label}>
+                  <Link href={service.href} className="text-white/70 hover:text-white hover:translate-x-1 transition-all inline-block">
+                    {service.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
-          <div className="flex flex-col gap-8">
-            <h3 className="text-white font-semibold mb-4">Contact Us</h3>
-
-            <div className="space-y-3">
-              <h4 className="text-gray-200 font-medium">Head Office</h4>
-              <ul className="space-y-2 leading-relaxed">
-                <li className="flex items-start gap-3">
-                  <Mail className="h-5 w-5 text-blue-400 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-400">gocleeny@gmail.com</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <Phone className="h-5 w-5 text-blue-400 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-400">+44 7350479620</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <MapPin className="h-5 w-5 text-blue-400 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-400">Bolton, UK</span>
-                </li>
-              </ul>
+          <div>
+            <h3 className="text-base font-bold font-heading mb-2 border-l-4 border-green-400 pl-3">Get in Touch</h3>
+            <div className="bg-white/5 backdrop-blur-sm p-3 rounded-2xl border border-white/10 space-y-2">
+              <div>
+                <h4 className="text-white/50 text-xs font-bold uppercase tracking-wider mb-1">Email Us</h4>
+                <Link href="mailto:gocleeny@gmail.com" className="flex items-center gap-3 text-white hover:text-green-300 transition-colors group">
+                  <Mail className="h-5 w-5 text-green-400 group-hover:scale-110 transition-transform" />
+                  <span>gocleeny@gmail.com</span>
+                </Link>
+              </div>
+              <div>
+                <h4 className="text-white/50 text-xs font-bold uppercase tracking-wider mb-1">Call Us</h4>
+                <Link href="tel:+447350479620" className="flex items-center gap-3 text-white hover:text-green-300 transition-colors group">
+                  <Phone className="h-5 w-5 text-green-400 group-hover:scale-110 transition-transform" />
+                  <span>+44 7350479620</span>
+                </Link>
+              </div>
+              <div>
+                <h4 className="text-white/50 text-xs font-bold uppercase tracking-wider mb-1">Location</h4>
+                <div className="flex items-center gap-3 text-white group">
+                  <MapPin className="h-5 w-5 text-green-400" />
+                  <span>Bolton, UK</span>
+                </div>
+              </div>
             </div>
-
-
-
-
           </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-12 pt-6 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-gray-400 text-sm">&copy; {new Date().getFullYear()} Go Cleeny. All rights reserved.</p>
-          <p className="text-gray-400 text-sm">Created by Intrepid Foundation.</p>
-          <div className="flex gap-4 mt-4 md:mt-0">
-            <Link href="/privacy" className="text-gray-400 hover:text-white text-sm transition-colors">
+        <div className="border-t border-white/10 mt-4 pt-4 flex flex-col md:flex-row justify-between items-center gap-4">
+          <div className="flex flex-col md:flex-row gap-2 md:gap-8 items-center text-center md:text-left">
+            <p className="text-white/50 text-sm">&copy; {new Date().getFullYear()} Go Cleeny. All rights reserved.</p>
+            <p className="text-white/50 text-sm flex items-center gap-1">Created by <span className="text-white font-medium">Intrepid Foundation</span></p>
+          </div>
+          <div className="flex gap-6">
+            <Link href="/privacy" className="text-white/60 hover:text-white text-sm transition-colors hover:underline decoration-green-400 underline-offset-4">
               Privacy Policy
             </Link>
-            <Link href="/terms" className="text-gray-400 hover:text-white text-sm transition-colors">
+            <Link href="/terms" className="text-white/60 hover:text-white text-sm transition-colors hover:underline decoration-green-400 underline-offset-4">
               Terms of Service
             </Link>
           </div>
         </div>
       </div>
-    </footer >
+    </footer>
   )
 }
