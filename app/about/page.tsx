@@ -45,11 +45,25 @@ export default function AboutPage() {
                   Go Cleeny was born from a singular, powerful ambition: to deliver uncompromising cleaning standards without the environmental toll. We saw an industry reliant on harsh chemicals and chose a different path—one where efficacy complements ecology.
                 </p>
                 <p>
-                  From day one, our mandate has been strict: 100% eco-friendly, non-toxic products that safeguard your home, your family, and our shared future. Our cleaning specialists aren't just staff; they are ambassadors of a healthier way of living.
+                  From day one, our mandate has been strict: 100% eco-friendly, non-toxic products that safeguard your home, your family, and our shared future. Our cleaning specialists aren't just staff; they are dedicated advocates of healthier living.
                 </p>
                 <p>
                   As part of the prestigious <span className="text-primary font-semibold">SAMBIC Group</span>, we marry local care with world-class operational excellence, constantly innovating to bring you the finest sustainable cleaning services in the UK.
                 </p>
+                <div className="grid grid-cols-3 gap-6 pt-6 border-t border-gray-100">
+                  <div>
+                    <div className="text-3xl font-bold text-primary font-heading">98%</div>
+                    <div className="text-sm text-gray-500 font-medium">Customer Satisfaction</div>
+                  </div>
+                  <div>
+                    <div className="text-3xl font-bold text-primary font-heading">100%</div>
+                    <div className="text-sm text-gray-500 font-medium">Eco-Certified Products</div>
+                  </div>
+                  <div>
+                    <div className="text-3xl font-bold text-primary font-heading">500+</div>
+                    <div className="text-sm text-gray-500 font-medium">Happy Homes</div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

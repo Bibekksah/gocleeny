@@ -31,7 +31,7 @@ export default function Home() {
             Eco-Friendly. Professional. Pristine.
           </div>
           <h1 className="text-5xl md:text-7xl font-heading font-bold text-white tracking-tight leading-tight">
-            Elevate Your Home with <br /> <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-300 to-emerald-200">Natural Purity</span>
+            Elevate Your Home with <br /> <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-300 to-emerald-200">Pure, Eco-Friendly Cleaning</span>
           </h1>
           <p className="text-xl md:text-2xl text-white/90 max-w-2xl leading-relaxed font-light">
             Experience the luxury of a meticulously cleaned home, achieved with 100% eco-friendly products that protect what matters most.
@@ -131,7 +131,7 @@ export default function Home() {
               {
                 icon: Leaf,
                 title: "Home Cleaning",
-                desc: "Metriculous care for your personal sanctuary.",
+                desc: "Meticulous care for your personal sanctuary.",
                 price: "From £16/hr",
                 offer: "20% off first visit"
               },
@@ -178,7 +178,7 @@ export default function Home() {
           <div className="text-center mt-16">
             <Button asChild className="bg-primary hover:bg-primary/90 text-white rounded-full px-8 h-12 shadow-lg text-lg">
               <Link href="/services" className="flex items-center gap-2">
-                View Full Service Menu <ArrowRight className="h-4 w-4" />
+                See Prices & Services <ArrowRight className="h-4 w-4" />
               </Link>
             </Button>
           </div>

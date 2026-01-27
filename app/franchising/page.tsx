@@ -4,12 +4,14 @@ import type React from "react"
 import { useState } from "react"
 import { motion } from "framer-motion"
 import Image from "next/image"
+import Link from "next/link"
 import { CheckCircle, TrendingUp, Users, DollarSign, Award, ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
+import { Testimonials } from "@/components/testimonials"
 
 export default function FranchisingPage() {
     const [formData, setFormData] = useState({
@@ -191,6 +193,32 @@ export default function FranchisingPage() {
                 </div>
             </section>
 
+            {/* Success Stories */}
+            <Testimonials
+                title="Partner Success Stories"
+                description="Hear from entrepreneurs who have built thriving businesses with Go Cleeny."
+                items={[
+                    {
+                        name: "Sarah Jenkins",
+                        role: "Franchise Partner, Leeds",
+                        content: "Transitioning from a corporate job to running my own Go Cleeny franchise was the best decision I've ever made. The support from HQ is phenomenal, and clients love our eco-friendly approach.",
+                        rating: 5,
+                    },
+                    {
+                        name: "David Miller",
+                        role: "Franchise Partner, Bristol",
+                        content: "The brand reputation opened doors immediately. We hit our first year revenue targets in just 8 months. The systems they provide make operations seamless.",
+                        rating: 5,
+                    },
+                    {
+                        name: "Emma & Tom Richards",
+                        role: "Franchise Partners, Manchester",
+                        content: "We wanted a business that aligned with our values. Go Cleeny allows us to be profitable while making a positive impact on the environment. It's a win-win.",
+                        rating: 5,
+                    }
+                ]}
+            />
+
             {/* CTA / Investment Teaser */}
             <section className="py-24 relative overflow-hidden">
                 <div className="absolute inset-0 bg-primary">
@@ -207,9 +235,9 @@ export default function FranchisingPage() {
                         {/* Hiding the detailed investment table for now, focusing on the CTA */}
                     </div>
                     <Button asChild size="lg" className="bg-white text-primary hover:bg-gray-100 text-lg px-10 h-14 rounded-full shadow-2xl">
-                        <a href="#contact-form">
+                        <Link href="/contact">
                             View Franchise Brochure <ArrowRight className="ml-2 h-5 w-5" />
-                        </a>
+                        </Link>
                     </Button>
                 </div>
             </section>

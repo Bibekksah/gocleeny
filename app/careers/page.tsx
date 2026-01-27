@@ -245,7 +245,7 @@ export default function CareersPage() {
                     </li>
                   ))}
                 </ul>
-                <Button className="w-full bg-gray-900 text-white hover:bg-primary transition-colors rounded-full h-12">
+                <Button className="w-full bg-primary text-white hover:bg-primary/90 transition-colors rounded-full h-12 shadow-md hover:translate-y-[-2px] transition-all">
                   Apply Now
                 </Button>
               </motion.div>
