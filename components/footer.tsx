@@ -8,19 +8,19 @@ export default function Footer() {
       {/* Background decoration */}
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-white/5 rounded-full blur-3xl pointer-events-none -mr-32 -mt-32"></div>
 
-      <div className="container relative z-10 px-4 md:px-6 py-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-          <div className="space-y-2">
-            <Link href="/" className="flex items-center gap-2 group">
+      <div className="container relative z-10 px-4 md:px-6 py-8 sm:py-10 md:py-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+          <div className="space-y-3 sm:space-y-4 text-center sm:text-left">
+            <Link href="/" className="flex items-center gap-2 group justify-center sm:justify-start">
               <div className="glass p-2 rounded-xl bg-white/10 group-hover:bg-white/20 transition-colors">
                 <Image src="/logo.png" alt="Go Cleeny Logo" width={48} height={48} className="object-contain" />
               </div>
-              <span className="text-xl font-bold text-white font-heading tracking-tight">Go Cleeny</span>
+              <span className="text-lg sm:text-xl font-bold text-white font-heading tracking-tight">Go Cleeny</span>
             </Link>
-            <p className="text-white/70 leading-relaxed">
+            <p className="text-sm sm:text-base text-white/70 leading-relaxed">
               Elevating hygiene standards with a conscience. Eco-friendly cleaning for homes and businesses that value the future.
             </p>
-            <div className="flex gap-4 pt-2">
+            <div className="flex gap-3 pt-2 justify-center sm:justify-start">
               {[
                 { icon: Facebook, href: "https://www.facebook.com/share/1DUpsW2TnA/?mibextid=wwXIfr", label: "Facebook" },
                 { icon: Instagram, href: "https://www.instagram.com/gocleeny_uk?igsh=MTcxazFoaWNuM3c5dg==", label: "Instagram" },
@@ -31,7 +31,7 @@ export default function Footer() {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-white/10 p-2.5 rounded-full hover:bg-white hover:text-primary transition-all duration-300 group"
+                  className="bg-white/10 p-2.5 sm:p-3 rounded-full hover:bg-white hover:text-primary transition-all duration-300 group touch-target"
                   aria-label={social.label}
                 >
                   <social.icon className="h-5 w-5" />
@@ -41,7 +41,7 @@ export default function Footer() {
                 href="https://www.tiktok.com/@go.cleeny.uk?_r=1&_t=ZN-93EiLV3jmwY"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-white/10 p-2.5 rounded-full hover:bg-white hover:text-primary transition-all duration-300 group"
+                className="bg-white/10 p-2.5 sm:p-3 rounded-full hover:bg-white hover:text-primary transition-all duration-300 group touch-target"
                 aria-label="TikTok"
               >
                 <svg
@@ -62,14 +62,14 @@ export default function Footer() {
             </div>
           </div>
 
-          <div>
-            <h3 className="text-base font-bold font-heading mb-2 border-l-4 border-green-400 pl-3">Quick Links</h3>
-            <ul className="space-y-1">
+          <div className="text-center sm:text-left">
+            <h3 className="text-base sm:text-lg font-bold font-heading mb-3 sm:mb-4 border-l-4 border-green-400 pl-3 inline-block sm:block">Quick Links</h3>
+            <ul className="space-y-2">
               {["Home", "About Us", "Services", "Contact Us"].map((item) => {
                 const href = item === "Home" ? "/" : item === "About Us" ? "/about" : item === "Contact Us" ? "/contact" : "/services";
                 return (
                   <li key={item}>
-                    <Link href={href} className="text-white/70 hover:text-white hover:translate-x-1 transition-all inline-block">
+                    <Link href={href} className="text-sm sm:text-base text-white/70 hover:text-white hover:translate-x-1 transition-all inline-block touch-target">
                       {item}
                     </Link>
                   </li>
@@ -78,9 +78,9 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div>
-            <h3 className="text-base font-bold font-heading mb-2 border-l-4 border-green-400 pl-3">Our Expertise</h3>
-            <ul className="space-y-1">
+          <div className="text-center sm:text-left">
+            <h3 className="text-base sm:text-lg font-bold font-heading mb-3 sm:mb-4 border-l-4 border-green-400 pl-3 inline-block sm:block">Our Expertise</h3>
+            <ul className="space-y-2">
               {[
                 { label: "Home Cleaning", href: "/services#home" },
                 { label: "Office Cleaning", href: "/services#office" },
@@ -90,7 +90,7 @@ export default function Footer() {
                 { label: "Airbnb & Holiday Let", href: "/services#airbnb" },
               ].map((service) => (
                 <li key={service.label}>
-                  <Link href={service.href} className="text-white/70 hover:text-white hover:translate-x-1 transition-all inline-block">
+                  <Link href={service.href} className="text-sm sm:text-base text-white/70 hover:text-white hover:translate-x-1 transition-all inline-block touch-target">
                     {service.label}
                   </Link>
                 </li>
@@ -98,27 +98,27 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div>
-            <h3 className="text-base font-bold font-heading mb-2 border-l-4 border-green-400 pl-3">Get in Touch</h3>
-            <div className="bg-white/5 backdrop-blur-sm p-3 rounded-2xl border border-white/10 space-y-2">
+          <div className="text-center sm:text-left">
+            <h3 className="text-base sm:text-lg font-bold font-heading mb-3 sm:mb-4 border-l-4 border-green-400 pl-3 inline-block sm:block">Get in Touch</h3>
+            <div className="bg-white/5 backdrop-blur-sm p-4 rounded-2xl border border-white/10 space-y-3">
               <div>
-                <h4 className="text-white/50 text-xs font-bold uppercase tracking-wider mb-1">Email Us</h4>
-                <Link href="mailto:gocleeny@gmail.com" className="flex items-center gap-3 text-white hover:text-green-300 transition-colors group">
-                  <Mail className="h-5 w-5 text-green-400 group-hover:scale-110 transition-transform" />
-                  <span>gocleeny@gmail.com</span>
+                <h4 className="text-white/50 text-xs font-bold uppercase tracking-wider mb-1.5">Email Us</h4>
+                <Link href="mailto:gocleeny@gmail.com" className="flex items-center gap-3 text-sm sm:text-base text-white hover:text-green-300 transition-colors group justify-center sm:justify-start">
+                  <Mail className="h-5 w-5 text-green-400 group-hover:scale-110 transition-transform flex-shrink-0" />
+                  <span className="break-all">gocleeny@gmail.com</span>
                 </Link>
               </div>
               <div>
-                <h4 className="text-white/50 text-xs font-bold uppercase tracking-wider mb-1">Call Us</h4>
-                <Link href="tel:+447350479620" className="flex items-center gap-3 text-white hover:text-green-300 transition-colors group">
-                  <Phone className="h-5 w-5 text-green-400 group-hover:scale-110 transition-transform" />
+                <h4 className="text-white/50 text-xs font-bold uppercase tracking-wider mb-1.5">Call Us</h4>
+                <Link href="tel:+447350479620" className="flex items-center gap-3 text-sm sm:text-base text-white hover:text-green-300 transition-colors group justify-center sm:justify-start">
+                  <Phone className="h-5 w-5 text-green-400 group-hover:scale-110 transition-transform flex-shrink-0" />
                   <span>+44 7350479620</span>
                 </Link>
               </div>
               <div>
-                <h4 className="text-white/50 text-xs font-bold uppercase tracking-wider mb-1">Location</h4>
-                <div className="flex items-center gap-3 text-white group">
-                  <MapPin className="h-5 w-5 text-green-400" />
+                <h4 className="text-white/50 text-xs font-bold uppercase tracking-wider mb-1.5">Location</h4>
+                <div className="flex items-center gap-3 text-sm sm:text-base text-white group justify-center sm:justify-start">
+                  <MapPin className="h-5 w-5 text-green-400 flex-shrink-0" />
                   <span>Bolton, UK</span>
                 </div>
               </div>

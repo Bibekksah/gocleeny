@@ -112,7 +112,7 @@ export default function CareersPage() {
   return (
     <main className="flex flex-col min-h-screen overflow-x-hidden">
       {/* Hero Section */}
-      <section className="relative w-full h-[60vh] flex items-center justify-center">
+      <section className="relative w-full h-[50vh] sm:h-[60vh] flex items-center justify-center">
         <div className="absolute inset-0 z-0">
           <Image
             src="/careers.webp"
@@ -132,7 +132,7 @@ export default function CareersPage() {
           <div className="inline-block px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white text-sm font-medium tracking-wide mb-4">
             Join Our Team
           </div>
-          <h1 className="text-5xl md:text-7xl font-heading font-bold text-white tracking-tight mb-6">
+          <h1 className="heading-hero font-heading font-bold text-white tracking-tight mb-4 sm:mb-6">
             Build a Career with Purpose
           </h1>
           <p className="text-xl md:text-2xl text-white/90 max-w-2xl font-light">
@@ -142,11 +142,11 @@ export default function CareersPage() {
       </section>
 
       {/* Why Join Us */}
-      <section className="py-24 bg-white relative">
+      <section className="section-padding bg-white relative">
         <div className="container px-4 md:px-6">
           <div className="text-center mb-16 max-w-3xl mx-auto">
             <span className="text-primary font-bold tracking-wider uppercase text-sm mb-2 block">Why Go Cleeny?</span>
-            <h2 className="text-3xl md:text-4xl font-heading font-bold tracking-tight text-gray-900 mb-6">
+            <h2 className="heading-section font-heading font-bold tracking-tight text-gray-900 mb-6">
               More Than Just a Job
             </h2>
             <p className="text-xl text-gray-600 leading-relaxed">
@@ -178,7 +178,7 @@ export default function CareersPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="bg-gray-50 p-8 rounded-2xl border border-gray-100 hover:shadow-premium-hover transition-all duration-300 hover:-translate-y-1 group"
+                className="bg-gray-50 p-6 sm:p-8 rounded-2xl border border-gray-100 hover:shadow-premium-hover transition-all duration-300 hover:-translate-y-1 group"
               >
                 <div className="h-12 w-12 bg-white rounded-xl shadow-sm flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors duration-300">
                   <item.icon className="h-6 w-6 text-primary group-hover:text-white" />
@@ -192,10 +192,10 @@ export default function CareersPage() {
       </section>
 
       {/* Current Openings */}
-      <section className="py-24 bg-gray-50">
+      <section className="section-padding bg-gray-50">
         <div className="container px-4 md:px-6">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-heading font-bold tracking-tight text-gray-900">Current Openings</h2>
+            <h2 className="heading-section font-heading font-bold tracking-tight text-gray-900">Current Openings</h2>
             <p className="text-gray-600 mt-4 max-w-2xl mx-auto text-lg">
               Ready to make a difference? Explore our available positions.
             </p>
@@ -228,7 +228,7 @@ export default function CareersPage() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-premium-hover transition-all duration-300 border border-gray-100 flex flex-col"
+                className="bg-white p-6 sm:p-8 rounded-2xl shadow-sm hover:shadow-premium-hover transition-all duration-300 border border-gray-100 flex flex-col"
               >
                 <h3 className="text-2xl font-bold mb-2 font-heading text-gray-900">{job.title}</h3>
                 <div className="inline-block bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-medium mb-4 self-start">

@@ -12,6 +12,12 @@ export default function Navbar() {
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen)
+    // Prevent body scroll when menu is open
+    if (!isMenuOpen) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = 'unset'
+    }
   }
 
   return (
@@ -19,11 +25,11 @@ export default function Navbar() {
       <div className="container flex h-16 items-center justify-between px-4 md:px-6">
         <Link href="/" className="flex items-center gap-2 group">
           <Image src="/logo.png" alt="Go Cleeny Logo" width={40} height={40} className="object-contain group-hover:scale-110 transition-transform duration-300" />
-          <span className="text-xl font-heading font-bold text-primary tracking-tight">Go Cleeny</span>
+          <span className="text-lg sm:text-xl font-heading font-bold text-primary tracking-tight">Go Cleeny</span>
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex gap-8">
+        <nav className="hidden md:flex gap-6 lg:gap-8">
           {["Home", "About Us", "Services", "Careers", "Franchising", "Contact"].map((item) => {
             const href = item === "Home" ? "/" : item === "About Us" ? "/about" : `/${item.toLowerCase().replace(" ", "-")}`;
             return (
@@ -39,34 +45,41 @@ export default function Navbar() {
           })}
         </nav>
 
-        {/* Mobile Menu Button */}
-        <Button variant="ghost" size="icon" className="md:hidden hover:bg-primary/5 hover:text-primary" onClick={toggleMenu}>
+        {/* Mobile Menu Button - Touch optimized */}
+        <button
+          className="md:hidden p-2 hover:bg-primary/5 hover:text-primary rounded-lg transition-colors touch-target"
+          onClick={toggleMenu}
+          aria-label="Toggle menu"
+          aria-expanded={isMenuOpen}
+        >
           <Menu className="h-6 w-6" />
-          <span className="sr-only">Toggle menu</span>
-        </Button>
+        </button>
       </div>
 
-      {/* Mobile Navigation */}
+      {/* Mobile Navigation - Optimized for touch */}
       {isMenuOpen && (
-        <div className="fixed inset-0 z-50 bg-white/95 backdrop-blur-xl md:hidden animate-in slide-in-from-top-10 duration-200">
+        <div className="fixed inset-0 z-50 bg-white/95 backdrop-blur-xl md:hidden">
           <div className="container flex h-16 items-center justify-between px-4 border-b border-gray-100">
-            <Link href="/" className="flex items-center gap-2">
+            <Link href="/" className="flex items-center gap-2" onClick={toggleMenu}>
               <Image src="/logo.png" alt="Go Cleeny Logo" width={40} height={40} className="object-contain" />
               <span className="text-xl font-heading font-bold text-primary">Go Cleeny</span>
             </Link>
-            <Button variant="ghost" size="icon" className="hover:bg-red-50 hover:text-destructive" onClick={toggleMenu}>
+            <button
+              className="p-2 hover:bg-red-50 hover:text-destructive rounded-lg transition-colors touch-target"
+              onClick={toggleMenu}
+              aria-label="Close menu"
+            >
               <X className="h-6 w-6" />
-              <span className="sr-only">Close menu</span>
-            </Button>
+            </button>
           </div>
-          <nav className="container px-4 py-8 flex flex-col gap-2">
+          <nav className="container px-4 py-6 flex flex-col gap-1 overflow-y-auto max-h-[calc(100vh-4rem)]">
             {["Home", "About Us", "Services", "Careers", "Franchising", "Contact"].map((item) => {
               const href = item === "Home" ? "/" : item === "About Us" ? "/about" : `/${item.toLowerCase().replace(" ", "-")}`;
               return (
                 <Link
                   key={item}
                   href={href}
-                  className="text-lg font-medium p-4 hover:bg-primary/5 hover:text-primary rounded-lg transition-colors border-b border-gray-50 last:border-0"
+                  className="text-base sm:text-lg font-medium px-4 py-3 sm:py-4 hover:bg-primary/5 hover:text-primary rounded-lg transition-colors border-b border-gray-50 last:border-0 touch-target"
                   onClick={toggleMenu}
                 >
                   {item}

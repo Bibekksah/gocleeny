@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <main className="flex flex-col min-h-screen overflow-x-hidden">
       {/* Hero Section */}
-      <section className="relative w-full min-h-[90vh] flex items-center justify-center">
+      <section className="relative w-full min-h-[85vh] sm:min-h-[90vh] flex items-center justify-center">
         <div className="absolute inset-0 z-0">
           <Image
             src="/home2.webp"
@@ -25,24 +25,24 @@ export default function Home() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: "easeOut" }}
-          className="container relative z-20 px-4 md:px-6 flex flex-col items-center text-center space-y-8 max-w-4xl"
+          className="container relative z-20 px-4 md:px-6 flex flex-col items-center text-center space-y-6 sm:space-y-8 max-w-4xl"
         >
-          <div className="inline-block px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white text-sm font-medium tracking-wide mb-2">
+          <div className="inline-block px-3 sm:px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white text-xs sm:text-sm font-medium tracking-wide">
             Eco-Friendly. Professional. Pristine.
           </div>
-          <h1 className="text-5xl md:text-7xl font-heading font-bold text-white tracking-tight leading-tight">
-            Elevate Your Home with <br /> <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-300 to-emerald-200">Pure, Eco-Friendly Cleaning</span>
+          <h1 className="heading-hero font-heading font-bold text-white tracking-tight leading-tight">
+            Elevate Your Home with <br className="hidden sm:block" /> <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-300 to-emerald-200">Pure, Eco-Friendly Cleaning</span>
           </h1>
-          <p className="text-xl md:text-2xl text-white/90 max-w-2xl leading-relaxed font-light">
+          <p className="text-lg sm:text-xl md:text-2xl text-white/90 max-w-2xl leading-relaxed font-light px-4">
             Experience the luxury of a meticulously cleaned home, achieved with 100% eco-friendly products that protect what matters most.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 mt-8">
-            <Button size="lg" className="bg-white text-primary hover:bg-gray-100 text-lg px-8 h-12 rounded-full shadow-premium hover:shadow-premium-hover transition-all duration-300" asChild>
-              <Link href="/contact" className="flex items-center gap-2">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-6 sm:mt-8 w-full sm:w-auto px-4 sm:px-0">
+            <Button size="lg" className="bg-white text-primary hover:bg-gray-100 text-base sm:text-lg px-6 sm:px-8 h-12 sm:h-14 rounded-full shadow-premium hover:shadow-premium-hover transition-all duration-300 w-full sm:w-auto" asChild>
+              <Link href="/contact" className="flex items-center justify-center gap-2">
                 Get a Quote <ArrowRight className="h-5 w-5" />
               </Link>
             </Button>
-            <Button size="lg" variant="outline" className="border-2 border-white text-white bg-transparent hover:bg-white hover:text-primary text-lg px-8 h-12 rounded-full backdrop-blur-md transition-all duration-300" asChild>
+            <Button size="lg" variant="outline" className="border-2 border-white text-white bg-transparent hover:bg-white hover:text-primary text-base sm:text-lg px-6 sm:px-8 h-12 sm:h-14 rounded-full backdrop-blur-md transition-all duration-300 w-full sm:w-auto" asChild>
               <Link href="/services">
                 Explore Services
               </Link>
@@ -52,7 +52,7 @@ export default function Home() {
       </section>
 
       {/* Introduction Section */}
-      <section className="py-24 bg-white relative">
+      <section className="section-padding bg-white relative">
         <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-gray-50 to-transparent opacity-50" />
         <div className="container px-4 md:px-6">
           <div className="grid gap-16 md:grid-cols-2 items-center">
@@ -60,10 +60,10 @@ export default function Home() {
               <div className="inline-block">
                 <span className="text-primary font-bold tracking-wider uppercase text-sm border-b-2 border-primary pb-1">Our Philosophy</span>
               </div>
-              <h2 className="text-4xl md:text-5xl font-heading font-bold tracking-tight text-gray-900 leading-tight">
-                Refining the Art of <br /> Sustainable Cleaning
+              <h2 className="heading-section font-heading font-bold tracking-tight text-gray-900 leading-tight">
+                Refining the Art of <br className="hidden sm:block" /> Sustainable Cleaning
               </h2>
-              <p className="text-gray-600 text-lg leading-relaxed text-justify">
+              <p className="text-gray-600 text-base sm:text-lg leading-relaxed text-justify">
                 At Go Cleeny, we don't just clean; we curate healthy living environments. We believe true luxury lies in the harmony between a spotless home and a preserved planet. Our bespoke eco-friendly approach ensures your sanctuary remains chemical-free and vibrantly clean.
               </p>
               <div className="space-y-6 pt-4">
@@ -93,7 +93,7 @@ export default function Home() {
                 </Link>
               </Button>
             </div>
-            <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl skew-y-1 transform transition-transform hover:skew-y-0 duration-700 ease-out">
+            <div className="relative h-[400px] sm:h-[500px] rounded-2xl overflow-hidden shadow-2xl skew-y-1 transform transition-transform hover:skew-y-0 duration-700 ease-out">
               <Image
                 src="/home.webp"
                 alt="Eco-friendly cleaning"
@@ -112,7 +112,7 @@ export default function Home() {
       </section>
 
       {/* Services Preview */}
-      <section className="py-24 bg-gray-50 relative overflow-hidden">
+      <section className="section-padding bg-gray-50 relative overflow-hidden">
         {/* Background Patterns */}
         <div className="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
         <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-96 h-96 bg-green-500/5 rounded-full blur-3xl" />
@@ -120,7 +120,7 @@ export default function Home() {
         <div className="container px-4 md:px-6 relative z-10">
           <div className="text-center mb-16 max-w-3xl mx-auto">
             <span className="text-primary font-bold tracking-wider uppercase text-sm mb-2 block">Our Expertise</span>
-            <h2 className="text-4xl md:text-5xl font-heading font-bold tracking-tight mb-6">Curated Cleaning Services</h2>
+            <h2 className="heading-section font-heading font-bold tracking-tight mb-6">Curated Cleaning Services</h2>
             <p className="text-xl text-gray-600">
               Bespoke solutions compliant with the highest standards of hygiene and sustainability.
             </p>
@@ -160,12 +160,12 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-premium-hover transition-all duration-300 hover:-translate-y-2 group border border-gray-100"
+                className="bg-white p-6 sm:p-8 rounded-2xl shadow-sm hover:shadow-premium-hover transition-all duration-300 hover:-translate-y-2 group border border-gray-100"
               >
                 <div className="h-14 w-14 bg-gray-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors duration-300">
                   <service.icon className="h-7 w-7 text-gray-700 group-hover:text-white" />
                 </div>
-                <h3 className="text-2xl font-bold mb-3 font-heading">{service.title}</h3>
+                <h3 className="text-xl sm:text-2xl font-bold mb-3 font-heading">{service.title}</h3>
                 <p className="text-gray-600 mb-6 leading-relaxed">{service.desc}</p>
                 <div className="border-t border-gray-100 pt-4 mt-auto">
                   <p className="text-primary font-bold text-lg">{service.price}</p>
@@ -186,7 +186,7 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 relative overflow-hidden">
+      <section className="section-padding relative overflow-hidden">
         <div className="absolute inset-0 bg-primary z-0">
 
           {/* Abstract shapes */}
@@ -195,7 +195,7 @@ export default function Home() {
         </div>
 
         <div className="container relative z-10 px-4 md:px-6 text-center">
-          <h2 className="text-4xl md:text-5xl font-heading font-bold mb-6 text-white tracking-tight">
+          <h2 className="heading-section font-heading font-bold mb-6 text-white tracking-tight">
             Ready to Transform Your Space?
           </h2>
           <p className="text-xl md:text-2xl text-white/90 mb-10 max-w-2xl mx-auto font-light">

@@ -7,7 +7,7 @@ export default function ServicesPage() {
   return (
     <main className="flex flex-col min-h-screen overflow-x-hidden">
       {/* Hero Section */}
-      <section className="relative w-full h-[60vh] flex items-center justify-center">
+      <section className="relative w-full h-[50vh] sm:h-[60vh] flex items-center justify-center">
         <div className="absolute inset-0 z-0">
           <Image
             src="/servicewe.webp"
@@ -22,7 +22,7 @@ export default function ServicesPage() {
           <div className="inline-block px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white text-sm font-medium tracking-wide mb-4">
             Exceptional Standards. Zero Compromise.
           </div>
-          <h1 className="text-5xl md:text-7xl font-heading font-bold text-white tracking-tight mb-6">
+          <h1 className="heading-hero font-heading font-bold text-white tracking-tight mb-4 sm:mb-6">
             Bespoke Services
           </h1>
           <p className="text-xl md:text-2xl text-white/90 max-w-2xl font-light">
@@ -32,10 +32,10 @@ export default function ServicesPage() {
       </section>
 
       {/* Services Introduction */}
-      <section className="py-24 bg-white relative">
+      <section className="section-padding bg-white relative">
         <div className="container px-4 md:px-6 text-center">
           <div className="max-w-3xl mx-auto space-y-6">
-            <h2 className="text-3xl md:text-4xl font-heading font-bold tracking-tight text-gray-900">
+            <h2 className="heading-section font-heading font-bold tracking-tight text-gray-900">
               The Go Cleeny Standard
             </h2>
             <p className="text-xl text-gray-600 leading-relaxed">
@@ -132,14 +132,14 @@ export default function ServicesPage() {
           bgColor: "bg-white"
         }
       ].map((service) => (
-        <section key={service.id} id={service.id} className={`py-24 ${service.bgColor}`}>
+        <section key={service.id} id={service.id} className={`section-padding ${service.bgColor}`}>
           <div className="container px-4 md:px-6">
             <div className={`grid gap-16 md:grid-cols-2 items-center ${service.reverse ? 'md:grid-flow-col-dense' : ''}`}>
-              <div className={`space-y-8 ${service.reverse ? 'md:col-start-2' : ''}`}>
+              <div className={`space-y-6 sm:space-y-8 ${service.reverse ? 'md:col-start-2' : ''}`}>
                 <div className="h-16 w-16 bg-primary/10 rounded-2xl flex items-center justify-center text-primary">
                   <service.icon className="h-8 w-8" />
                 </div>
-                <h2 className="text-4xl font-heading font-bold tracking-tight text-gray-900">{service.title}</h2>
+                <h2 className="text-3xl sm:text-4xl font-heading font-bold tracking-tight text-gray-900">{service.title}</h2>
                 <p className="text-lg text-gray-600 leading-relaxed text-justify">
                   {service.desc}
                 </p>
@@ -163,7 +163,7 @@ export default function ServicesPage() {
                   </Link>
                 </Button>
               </div>
-              <div className={`relative h-[500px] rounded-2xl overflow-hidden shadow-2xl ${service.reverse ? 'md:col-start-1' : ''}`}>
+              <div className={`relative h-[350px] sm:h-[450px] md:h-[500px] rounded-2xl overflow-hidden shadow-2xl ${service.reverse ? 'md:col-start-1' : ''}`}>
                 <Image
                   src={service.image}
                   alt={service.title}
@@ -178,14 +178,15 @@ export default function ServicesPage() {
       ))}
 
       {/* Comparison Table */}
-      <section className="py-24 bg-white border-t border-gray-100">
+      <section className="section-padding bg-white border-t border-gray-100">
         <div className="container px-4 md:px-6">
           <div className="text-center mb-16 max-w-3xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-heading font-bold tracking-tight text-gray-900 mb-4">Compare Our Plans</h2>
+            <h2 className="heading-section font-heading font-bold tracking-tight text-gray-900 mb-4">Compare Our Plans</h2>
             <p className="text-xl text-gray-600">Choose the level of care that perfectly suits your home.</p>
           </div>
 
-          <div className="overflow-x-auto">
+          <div className="overflow-x-auto smooth-scroll">
+            <p className="text-sm text-gray-500 mb-4 md:hidden text-center">← Scroll horizontally to compare →</p>
             <div className="min-w-[800px] bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden">
               <div className="grid grid-cols-4 bg-gray-50 border-b border-gray-200 p-6">
                 <div className="font-bold text-gray-500 uppercase tracking-wider text-sm flex items-center">Feature</div>
@@ -223,10 +224,10 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 relative overflow-hidden bg-primary">
+      <section className="section-padding relative overflow-hidden bg-primary">
 
         <div className="container px-4 md:px-6 text-center relative z-10">
-          <h2 className="text-4xl md:text-5xl font-heading font-bold mb-6 text-white tracking-tight">Ready for Excellence?</h2>
+          <h2 className="heading-section font-heading font-bold mb-6 text-white tracking-tight">Ready for Excellence?</h2>
           <p className="text-xl md:text-2xl text-white/90 mb-10 max-w-2xl mx-auto font-light">
             Book your eco-friendly cleaning service today and experience the difference.
           </p>

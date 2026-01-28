@@ -96,7 +96,7 @@ export default function ContactPage() {
   return (
     <main className="flex flex-col min-h-screen overflow-x-hidden bg-gray-50">
       {/* Hero Section */}
-      <section className="relative w-full h-[50vh] flex items-center justify-center">
+      <section className="relative w-full h-[45vh] sm:h-[50vh] flex items-center justify-center">
         <div className="absolute inset-0 z-0">
           <Image
             src="/contact.webp"
@@ -116,7 +116,7 @@ export default function ContactPage() {
           <div className="inline-block px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white text-sm font-medium tracking-wide mb-4">
             Get In Touch
           </div>
-          <h1 className="text-5xl md:text-6xl font-bold font-heading text-white tracking-tight mb-4">Contact Us</h1>
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold font-heading text-white tracking-tight mb-4">Contact Us</h1>
           <p className="text-xl text-white/90 max-w-2xl font-light">
             We'd love to hear from you. Reach out today to discuss your cleaning needs.
           </p>
@@ -129,12 +129,12 @@ export default function ContactPage() {
 
           {/* Office Toggle - Centered above content */}
           <div className="flex justify-center mb-12">
-            <div className="flex p-1 bg-white rounded-full shadow-lg border border-gray-100">
+            <div className="flex p-1 bg-white rounded-full shadow-lg border border-gray-100 max-w-full overflow-hidden">
               {["HEAD", "BRANCH"].map((office) => (
                 <button
                   key={office}
                   onClick={() => setActiveOffice(office as Office)}
-                  className={`px-6 py-2.5 rounded-full text-sm font-bold transition-all duration-300 ${activeOffice === office
+                  className={`px-4 sm:px-6 py-2.5 rounded-full text-xs sm:text-sm font-bold transition-all duration-300 whitespace-nowrap ${activeOffice === office
                     ? "bg-primary text-white shadow-md transform scale-105"
                     : "text-gray-500 hover:text-gray-900"
                     }`}
@@ -156,9 +156,9 @@ export default function ContactPage() {
               >
                 <div className="grid md:grid-cols-5 h-full">
                   {/* Form Side */}
-                  <div className="md:col-span-3 p-8 md:p-12">
+                  <div className="md:col-span-3 p-6 sm:p-8 md:p-12">
                     <div className="mb-8">
-                      <h2 className="text-2xl font-bold font-heading text-gray-900">Send us a Message</h2>
+                      <h2 className="text-xl sm:text-2xl font-bold font-heading text-gray-900">Send us a Message</h2>
                       <p className="text-gray-500 mt-2">Connecting with {currentOffice.name}</p>
                     </div>
                     <form onSubmit={handleSubmit} className="space-y-5">
@@ -175,7 +175,7 @@ export default function ContactPage() {
                           />
                           {errors.name && <p className="text-xs text-red-500 mt-1 ml-1">{errors.name}</p>}
                         </div>
-                        <div className="grid grid-cols-2 gap-4">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                           <div>
                             <Label htmlFor="email" className="text-gray-700 font-medium ml-1">Email</Label>
                             <Input
@@ -228,7 +228,7 @@ export default function ContactPage() {
                   </div>
 
                   {/* Info Side (Dark) */}
-                  <div className="md:col-span-2 bg-gray-900 p-8 md:p-12 text-white flex flex-col justify-between relative overflow-hidden">
+                  <div className="md:col-span-2 bg-gray-900 p-6 sm:p-8 md:p-12 text-white flex flex-col justify-between relative overflow-hidden">
                     <div className="absolute top-0 right-0 w-64 h-64 bg-primary/20 rounded-full blur-3xl -mr-16 -mt-16 pointer-events-none"></div>
                     <div className="absolute bottom-0 left-0 w-64 h-64 bg-green-500/20 rounded-full blur-3xl -ml-16 -mb-16 pointer-events-none"></div>
 
@@ -319,7 +319,7 @@ export default function ContactPage() {
               <div className="mx-auto h-16 w-16 mb-6">
                 <Headphones className="h-full w-full opacity-80" strokeWidth={1} />
               </div>
-              <h3 className="text-2xl font-bold font-heading mb-2">Help Center</h3>
+              <h3 className="text-xl sm:text-2xl font-bold font-heading mb-2">Help Center</h3>
               <p className="text-xl font-medium mb-3">{currentOffice.phone}</p>
               <p className="text-white/70 text-sm leading-relaxed max-w-xs mx-auto">
                 {currentOffice.email}
@@ -337,7 +337,7 @@ export default function ContactPage() {
               <div className="mx-auto h-16 w-16 mb-6">
                 <Ticket className="h-full w-full opacity-80" strokeWidth={1} />
               </div>
-              <h3 className="text-2xl font-bold font-heading mb-2">Support Ticket</h3>
+              <h3 className="text-xl sm:text-2xl font-bold font-heading mb-2">Support Ticket</h3>
               <p className="text-white/90 text-sm leading-relaxed max-w-xs mx-auto">
                 Send a ticket to us and inform if there are any trouble with our Services
               </p>
@@ -354,7 +354,7 @@ export default function ContactPage() {
               <div className="mx-auto h-16 w-16 mb-6">
                 <MessageSquare className="h-full w-full opacity-80" strokeWidth={1} />
               </div>
-              <h3 className="text-2xl font-bold font-heading mb-2">Questions?</h3>
+              <h3 className="text-xl sm:text-2xl font-bold font-heading mb-2">Questions?</h3>
               <p className="text-white/90 text-sm leading-relaxed max-w-xs mx-auto">
                 Fill out the form above or email us suggestions and we will contact you.
               </p>
@@ -364,7 +364,7 @@ export default function ContactPage() {
       </section>
 
       {/* Dynamic Map Section */}
-      <section className="w-full h-[450px] relative bg-gray-200">
+      <section className="w-full h-[350px] sm:h-[450px] relative bg-gray-200">
         <iframe
           width="100%"
           height="100%"
