@@ -82,7 +82,7 @@ export default function Footer() {
             <h3 className="text-base sm:text-lg font-bold font-heading mb-3 sm:mb-4 border-l-4 border-green-400 pl-3 inline-block sm:block">Our Expertise</h3>
             <ul className="space-y-2">
               {[
-                { label: "Home Cleaning", href: "/services#home" },
+                { label: "HMO Cleaning", href: "/services#hmo" },
                 { label: "Office Cleaning", href: "/services#office" },
                 { label: "Commercial Cleaning", href: "/services#commercial" },
                 { label: "Deep Cleaning", href: "/services#deep" },

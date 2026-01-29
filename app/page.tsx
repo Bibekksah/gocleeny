@@ -129,9 +129,9 @@ export default function Home() {
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
             {[
               {
-                icon: Leaf,
-                title: "Home Cleaning",
-                desc: "Meticulous care for your personal sanctuary.",
+                icon: Building,
+                title: "HMO Cleaning",
+                desc: "Expert cleaning for shared homes and multi-occupancy living.",
                 price: "From £16/hr",
                 offer: "20% off first visit"
               },

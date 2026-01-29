@@ -64,11 +64,11 @@ export default function ServicesPage() {
       {/* Service Block Component */}
       {[
         {
-          id: "home",
-          icon: Leaf,
-          title: "Home Cleaning",
-          desc: "Our signature home cleaning service is a symphony of efficiency and care. Tailored to transform your living space into a sanctuary of cleanliness.",
-          features: ["Thorough sanitization of all living areas", "Dusting, vacuuming, and mopping with precision", "Kitchen and bathroom deep detailing", "Pet and child-safe eco-friendly formulas"],
+          id: "hmo",
+          icon: Building,
+          title: "HMO Cleaning",
+          desc: "One our signature HMO (House in Multiple Occupation) cleaning services. We provide reliable, high-quality cleaning for shared homes, keeping communal areas, kitchens, bathrooms, and bedrooms spotless and hygienic. Trusted by landlords and property managers, our experienced team delivers consistent, professional results that meet the demands of multi-occupancy living.\n\nGo Cleeny – The HMO Cleaning Experts.",
+          features: ["Thorough sanitization of all communal areas", "Kitchen and bathroom deep cleaning for shared spaces", "Bedroom maintenance and detailing", "Flexible scheduling suited to tenant occupancy"],
           price: "From £16/hr",
           subPrice: "20% off for first-time customers",
           image: "/home3.webp",
