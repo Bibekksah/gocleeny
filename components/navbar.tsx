@@ -31,7 +31,7 @@ export default function Navbar() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex gap-6 lg:gap-8">
-            {["Home", "About Us", "Services", "Careers", "Franchising", "Contact"].map((item) => {
+            {["Home", "About Us", "Services", "Reviews", "Careers", "Franchising", "Contact"].map((item) => {
               const href = item === "Home" ? "/" : item === "About Us" ? "/about" : `/${item.toLowerCase().replace(" ", "-")}`;
               return (
                 <Link
@@ -78,7 +78,7 @@ export default function Navbar() {
 
           {/* Navigation Links Section */}
           <nav className="flex-1 px-4 py-6 flex flex-col gap-2 overflow-y-auto bg-white">
-            {["Home", "About Us", "Services", "Careers", "Franchising", "Contact"].map((item) => {
+            {["Home", "About Us", "Services", "Reviews", "Careers", "Franchising", "Contact"].map((item) => {
               const href = item === "Home" ? "/" : item === "About Us" ? "/about" : `/${item.toLowerCase().replace(" ", "-")}`;
               return (
                 <Link
