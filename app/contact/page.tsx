@@ -236,27 +236,27 @@ export default function ContactPage() {
                       <div>
                         <h3 className="text-xl font-bold font-heading mb-6 border-b border-white/10 pb-4">Contact Info</h3>
                         <div className="space-y-6">
-                          <div className="flex items-start gap-4">
-                            <div className="h-10 w-10 rounded-full bg-white/10 flex items-center justify-center shrink-0">
-                              <Phone className="h-5 w-5 text-green-400" />
+                          <div className="flex items-start gap-4 group cursor-pointer">
+                            <div className="h-10 w-10 rounded-full bg-white/10 flex items-center justify-center shrink-0 group-hover:bg-primary transition-colors duration-300">
+                              <Phone className="h-5 w-5 text-green-400 group-hover:text-white transition-colors duration-300" />
                             </div>
                             <div>
                               <p className="text-white/50 text-xs uppercase tracking-wider font-bold mb-1">Phone</p>
                               <p className="text-lg font-medium">{currentOffice.phone}</p>
                             </div>
                           </div>
-                          <div className="flex items-start gap-4">
-                            <div className="h-10 w-10 rounded-full bg-white/10 flex items-center justify-center shrink-0">
-                              <Mail className="h-5 w-5 text-green-400" />
+                          <div className="flex items-start gap-4 group cursor-pointer">
+                            <div className="h-10 w-10 rounded-full bg-white/10 flex items-center justify-center shrink-0 group-hover:bg-primary transition-colors duration-300">
+                              <Mail className="h-5 w-5 text-green-400 group-hover:text-white transition-colors duration-300" />
                             </div>
                             <div>
                               <p className="text-white/50 text-xs uppercase tracking-wider font-bold mb-1">Email</p>
                               <p className="text-lg font-medium break-all">{currentOffice.email}</p>
                             </div>
                           </div>
-                          <div className="flex items-start gap-4">
-                            <div className="h-10 w-10 rounded-full bg-white/10 flex items-center justify-center shrink-0">
-                              <MapPin className="h-5 w-5 text-green-400" />
+                          <div className="flex items-start gap-4 group cursor-pointer">
+                            <div className="h-10 w-10 rounded-full bg-white/10 flex items-center justify-center shrink-0 group-hover:bg-primary transition-colors duration-300">
+                              <MapPin className="h-5 w-5 text-green-400 group-hover:text-white transition-colors duration-300" />
                             </div>
                             <div>
                               <p className="text-white/50 text-xs uppercase tracking-wider font-bold mb-1">Location</p>
